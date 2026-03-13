@@ -1,52 +1,38 @@
-From now on in this chat do this task i will describe. Please map from the hebrew to hellenic and to latvian translations by words. 
-input format: first hebrew verse, then after newline greek verse then after newline latvian verse, after newline next verse of the three languages. Each greek and latvian line is already aligned with corresponding hebrew line. 
-output: Now I want word level mapping. Return only valid JSON. No explanations. No comments. Preserve hebrew word order. Create JSON for all the verses, putting each verse into a seperate list member. output format sample for simplier task, mapping greek to latvian:
-  {
-    "greek_words": [
-      { "index": 1, "greek": "ουδε", "latvian": ["Nevarēs", "arī"] },
-      { "index": 2, "greek": "ερουσιν", "latvian": ["sacīt"] },
-      { "index": 3, "greek": "Ιδου", "latvian": ["redzi"] },
-      { "index": 4, "greek": "ωδε", "latvian": ["še"] },
-      { "index": 5, "greek": "η", "latvian": ["vai"] },
-      { "index": 6, "greek": "Εκει", "latvian": ["tur"] },
-      { "index": 7, "greek": "ιδου", "latvian": ["jo", "redziet"] },
-      { "index": 8, "greek": "γαρ", "latvian": [] },
-      { "index": 9, "greek": "η", "latvian": [] },
-      { "index": 10, "greek": "βασιλεια", "latvian": ["Dieva", "valstība"] },
-      { "index": 11, "greek": "του", "latvian": [] },
-      { "index": 12, "greek": "Θεου", "latvian": [] },
-      { "index": 13, "greek": "εντος", "latvian": ["ir", "jūsu"] },
-      { "index": 14, "greek": "υμων", "latvian": ["vidū"] },
-      { "index": 15, "greek": "εστιν", "latvian": [] }
+From now on in this chat do this task i will describe. Please using the hebrew word meanings map from the hebrew to hellenic and to latvian translations by words. This is  like a many-to-many mapping, so use the fact that the Greek and Latvian are translations of the Hebrew. The need is for accuracy and completeness in mapping, even when word orders don't align perfectly. Because later I will make mappings adjustable using something like excel, but for now i need json as it is easier to work with. I am studying translation choices how concepts are rendered or lost from originals to translations and considering possible parallel concordance build.
+input format: Continous block of all the verses intermixing the translations. First hebrew, then after newline greek then after newline latvian; after newline next verse in the three languages. Each greek and latvian line is already aligned with corresponding hebrew line, but word order is not, as each word might have multiple words in other language or vice versa. To get the hebrew words from sentence, split hebrew on spaces. No need to group or ungroup the punctation even where i assume פ is punctation not part of word by seperating it using space from the other part of word. In such cases feel safe to output that פ as another word, which, of course, will have empty latvian and greek mapping lists for that word. If hypens or other punctation like ׃ are in the resulting space split word, feel safe to treat that as an unit for the output as later I will check whether splits are the same as words you specified in output.
+output: Now I want word level mapping. Return only valid JSON. No explanations. No comments. Preserve hebrew word order. Create JSON for all the verses, putting each verse into a seperate list member. Note that in 3:2 mapping it has split the two as to mark the beginning and end, but you can also map to first hebrew word only if such splitting is impossible. output format sample from Genesis chapter 9 verses 28 and 29:
+[
+{
+    "hebrew_words": [
+      { "index": 1, "hebrew": "וַֽיְחִי־", "greek": ["ἔζησεν", "δὲ"], "latvian": ["Un", "dzīvoja"] },
+      { "index": 2, "hebrew": "נֹ֖חַ", "greek": ["Νωε"], "latvian": ["Noa"] },
+      { "index": 3, "hebrew": "אַחַ֣ר", "greek": ["μετὰ"], "latvian": ["pēc"] },
+      { "index": 4, "hebrew": "הַמַּבּ֑וּל", "greek": ["τὸν", "κατακλυσμόν"], "latvian": ["ūdensplūdiem"] },
+      { "index": 5, "hebrew": "שְׁלֹ֤שׁ", "greek": ["τριακόσια"], "latvian": ["trīs", "simti"] },
+      { "index": 6, "hebrew": "מֵאוֹת֙", "greek": [], "latvian": [] },
+      { "index": 7, "hebrew": "שָׁנָ֔ה", "greek": ["ἔτη"], "latvian": ["gadus"] },
+      { "index": 8, "hebrew": "וַֽחֲמִשִּׁ֖ים", "greek": ["πεντήκοντα"], "latvian": ["piecdesmit"] },
+      { "index": 9, "hebrew": "שָׁנָֽה׃", "greek": [], "latvian": [] }
     ],
+    "leftover_greek": [],
     "leftover_latvian": []
   },
-  {
-    "greek_words": [
-      { "index": 1, "greek": "Ειπεν", "latvian": ["Bet", "mācekļiem"] },
-      { "index": 2, "greek": "δε", "latvian": [] },
-      { "index": 3, "greek": "προς", "latvian": [] },
-      { "index": 4, "greek": "τους", "latvian": [] },
-      { "index": 5, "greek": "μαθητας", "latvian": [] },
-      { "index": 6, "greek": "Ελευσονται", "latvian": ["Viņš", "sacīja", "Nāks"] },
-      { "index": 7, "greek": "ημεραι", "latvian": ["dienas"] },
-      { "index": 8, "greek": "οτε", "latvian": ["kad"] },
-      { "index": 9, "greek": "επιθυμησετε", "latvian": ["jūs", "ilgosities"] },
-      { "index": 10, "greek": "μιαν", "latvian": ["redzēt", "kaut", "vienu"] },
-      { "index": 11, "greek": "των", "latvian": [] },
-      { "index": 12, "greek": "ημερων", "latvian": [] },
-      { "index": 13, "greek": "του", "latvian": [] },
-      { "index": 14, "greek": "Υιου", "latvian": ["Cilvēka", "Dēla", "dienu"] },
-      { "index": 15, "greek": "του", "latvian": [] },
-      { "index": 16, "greek": "ανθρωπου", "latvian": [] },
-      { "index": 17, "greek": "ιδειν", "latvian": [] },
-      { "index": 18, "greek": "και", "latvian": ["bet"] },
-      { "index": 19, "greek": "ουκ", "latvian": ["ne"] },
-      { "index": 20, "greek": "οψεσθε", "latvian": ["redzēsit"] }
+{
+    "hebrew_words": [
+      { "index": 1, "hebrew": "וַיִּֽהְיוּ֙", "greek": ["καὶ", "ἐγένοντο"], "latvian": ["Un"] },
+      { "index": 2, "hebrew": "כָּל־", "greek": ["πᾶσαι"], "latvian": ["visi"] },
+      { "index": 3, "hebrew": "יְמֵי־", "greek": ["αἱ", "ἡμέραι"], "latvian": ["mūža"] },
+      { "index": 4, "hebrew": "נֹ֔חַ", "greek": ["Νωε"], "latvian": ["Noas"] },
+      { "index": 5, "hebrew": "תְּשַׁ֤ע", "greek": ["ἐννακόσια"], "latvian": ["deviņi", "simti"] },
+      { "index": 6, "hebrew": "מֵאוֹת֙", "greek": [], "latvian": [] },
+      { "index": 7, "hebrew": "שָׁנָ֔ה", "greek": ["πεντήκοντα"], "latvian": ["piecdesmit"] },
+      { "index": 8, "hebrew": "וַחֲמִשִּׁ֖ים", "greek": [], "latvian": [] },
+      { "index": 9, "hebrew": "שָׁנָ֑ה", "greek": ["ἔτη"], "latvian": ["gadi"] },
+      { "index": 10, "hebrew": "וַיָּמֹֽת׃", "greek": ["καὶ", "ἀπέθανεν"], "latvian": ["tad", "viņš", "nomira"] }
     ],
-    "leftover_latvian": []
-  },
- 
+    "leftover_greek": [],
+    "leftover_latvian": ["bija"]
+  }
+]
 If Latvian words in the verse remain unmapped, include them in leftover_latvian list. If greek remain unmapped, include the in leftover_greek list.
-So hebrew_words is main member, it has list of "greek" containing list of greek words or empty and "latvian" containing list of latvian words or empty.
 data:
