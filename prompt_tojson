@@ -1,38 +1,49 @@
-From now on in this chat do this task i will describe. Please using the hebrew word meanings map from the hebrew to hellenic and to latvian translations by words. This is  like a many-to-many mapping, so use the fact that the Greek and Latvian are translations of the Hebrew. The need is for accuracy and completeness in mapping, even when word orders don't align perfectly. Because later I will make mappings adjustable using something like excel, but for now i need json as it is easier to work with. I am studying translation choices how concepts are rendered or lost from originals to translations and considering possible parallel concordance build.
-input format: Continous block of all the verses intermixing the translations. First hebrew, then after newline greek then after newline latvian; after newline next verse in the three languages. Each greek and latvian line is already aligned with corresponding hebrew line, but word order is not, as each word might have multiple words in other language or vice versa. To get the hebrew words from sentence, split hebrew on spaces. No need to group or ungroup the punctation even where i assume פ is punctation not part of word by seperating it using space from the other part of word. In such cases feel safe to output that פ as another word, which, of course, will have empty latvian and greek mapping lists for that word. If hypens or other punctation like ׃ are in the resulting space split word, feel safe to treat that as an unit for the output as later I will check whether splits are the same as words you specified in output.
-output: Now I want word level mapping. Return only valid JSON. No explanations. No comments. Preserve hebrew word order. Create JSON for all the verses, putting each verse into a seperate list member. Note that in 3:2 mapping it has split the two as to mark the beginning and end, but you can also map to first hebrew word only if such splitting is impossible. output format sample from Genesis chapter 9 verses 28 and 29:
+From now on in this chat do this task i will describe. Your task is to align bible translations. I will give you the same verses in hebrew, then greek, then latvian. For each Hebrew word match zero or more Greek and zero or more Latvian words that are the translations. This is from Genesis. The need is for accuracy and completeness in the mapping, even when word orders don't align perfectly. I am studying translation choices how concepts are rendered or lost from originals to translations and considering possible parallel concordance build. Do not modify hebrew word order or words in any way.
+input format: Continous block of all the verses intermixing the translations. First hebrew, then after newline greek then after newline latvian; after newline next verse in the three languages. Each greek and latvian line is already aligned with corresponding hebrew line, but word order is not. Each word might have zero or more words in other language or vice versa. To get the hebrew words from sentence, split hebrew on spaces. No need to group or ungroup the punctation even where i assume פ is punctation not part of word by seperating it using space from the other part of word. In such cases feel safe to output that פ as another word, which, of course, will have empty latvian and greek mapping lists for that word. If hypens or other punctation like ׃ are in the resulting space split word, feel safe to treat that as an unit for the output as later I will check whether splits are the same as words you specified in output.
+output: Now I want word level mapping. Return only valid JSON. No explanations. No comments. Preserve hebrew word order. Do not default to outputing empty lists and putting all the words in leftover, but use leftover only when there seems to be extra words that do not fit to any of the original Hebrew words. Create JSON for all the verses, putting each verse into a seperate list member. If Latvian words in the verse remain unmapped, include them in leftover_latvian list. If greek remain unmapped, include the in leftover_greek list.
+Example of input and resulting output:
+output format sample from Genesis chapter 9 verses 28 and 29:
+data:
+
+וַֽיְחִי־ נֹ֖חַ אַחַ֣ר הַמַּבּ֑וּל שְׁלֹ֤שׁ מֵאוֹת֙ שָׁנָ֔ה וַֽחֲמִשִּׁ֖ים שָׁנָֽה׃
+ἔζησεν δὲ Νωε μετὰ τὸν κατακλυσμὸν τριακόσια πεντήκοντα ἔτη
+Un Noa dzīvoja pēc ūdensplūdiem trīs simti piecdesmit gadus
+וַיִּֽהְיוּ֙ כָּל־ יְמֵי־ נֹ֔חַ תְּשַׁ֤ע מֵאוֹת֙ שָׁנָ֔ה וַחֲמִשִּׁ֖ים שָׁנָ֑ה וַיָּמֹֽת׃ פ
+καὶ ἐγένοντο πᾶσαι αἱ ἡμέραι Νωε ἐννακόσια πεντήκοντα ἔτη καὶ ἀπέθανεν
+Un visi Noas mūža gadi bija deviņi simti piecdesmit tad viņš nomira
+output:
 [
 {
     "hebrew_words": [
-      { "index": 1, "hebrew": "וַֽיְחִי־", "greek": ["ἔζησεν", "δὲ"], "latvian": ["Un", "dzīvoja"] },
-      { "index": 2, "hebrew": "נֹ֖חַ", "greek": ["Νωε"], "latvian": ["Noa"] },
-      { "index": 3, "hebrew": "אַחַ֣ר", "greek": ["μετὰ"], "latvian": ["pēc"] },
-      { "index": 4, "hebrew": "הַמַּבּ֑וּל", "greek": ["τὸν", "κατακλυσμόν"], "latvian": ["ūdensplūdiem"] },
-      { "index": 5, "hebrew": "שְׁלֹ֤שׁ", "greek": ["τριακόσια"], "latvian": ["trīs", "simti"] },
-      { "index": 6, "hebrew": "מֵאוֹת֙", "greek": [], "latvian": [] },
-      { "index": 7, "hebrew": "שָׁנָ֔ה", "greek": ["ἔτη"], "latvian": ["gadus"] },
-      { "index": 8, "hebrew": "וַֽחֲמִשִּׁ֖ים", "greek": ["πεντήκοντα"], "latvian": ["piecdesmit"] },
-      { "index": 9, "hebrew": "שָׁנָֽה׃", "greek": [], "latvian": [] }
+      {"hebrew": "וַֽיְחִי־", "greek": ["ἔζησεν", "δὲ"], "latvian": ["Un", "dzīvoja"] },
+      {"hebrew": "נֹ֖חַ", "greek": ["Νωε"], "latvian": ["Noa"] },
+      {"hebrew": "אַחַ֣ר", "greek": ["μετὰ"], "latvian": ["pēc"] },
+      {"hebrew": "הַמַּבּ֑וּל", "greek": ["τὸν", "κατακλυσμόν"], "latvian": ["ūdensplūdiem"] },
+      {"hebrew": "שְׁלֹ֤שׁ", "greek": ["τριακόσια"], "latvian": ["trīs", "simti"] },
+      {"hebrew": "מֵאוֹת֙", "greek": [], "latvian": [] },
+      {"hebrew": "שָׁנָ֔ה", "greek": ["ἔτη"], "latvian": ["gadus"] },
+      {"hebrew": "וַֽחֲמִשִּׁ֖ים", "greek": ["πεντήκοντα"], "latvian": ["piecdesmit"] },
+      {"hebrew": "שָׁנָֽה׃", "greek": [], "latvian": [] }
     ],
     "leftover_greek": [],
     "leftover_latvian": []
   },
 {
     "hebrew_words": [
-      { "index": 1, "hebrew": "וַיִּֽהְיוּ֙", "greek": ["καὶ", "ἐγένοντο"], "latvian": ["Un"] },
-      { "index": 2, "hebrew": "כָּל־", "greek": ["πᾶσαι"], "latvian": ["visi"] },
-      { "index": 3, "hebrew": "יְמֵי־", "greek": ["αἱ", "ἡμέραι"], "latvian": ["mūža"] },
-      { "index": 4, "hebrew": "נֹ֔חַ", "greek": ["Νωε"], "latvian": ["Noas"] },
-      { "index": 5, "hebrew": "תְּשַׁ֤ע", "greek": ["ἐννακόσια"], "latvian": ["deviņi", "simti"] },
-      { "index": 6, "hebrew": "מֵאוֹת֙", "greek": [], "latvian": [] },
-      { "index": 7, "hebrew": "שָׁנָ֔ה", "greek": ["πεντήκοντα"], "latvian": ["piecdesmit"] },
-      { "index": 8, "hebrew": "וַחֲמִשִּׁ֖ים", "greek": [], "latvian": [] },
-      { "index": 9, "hebrew": "שָׁנָ֑ה", "greek": ["ἔτη"], "latvian": ["gadi"] },
-      { "index": 10, "hebrew": "וַיָּמֹֽת׃", "greek": ["καὶ", "ἀπέθανεν"], "latvian": ["tad", "viņš", "nomira"] }
+      {"hebrew": "וַיִּֽהְיוּ֙", "greek": ["καὶ", "ἐγένοντο"], "latvian": ["Un"] },
+      {"hebrew": "כָּל־", "greek": ["πᾶσαι"], "latvian": ["visi"] },
+      {"hebrew": "יְמֵי־", "greek": ["αἱ", "ἡμέραι"], "latvian": ["mūža"] },
+      {"hebrew": "נֹ֔חַ", "greek": ["Νωε"], "latvian": ["Noas"] },
+      {"hebrew": "תְּשַׁ֤ע", "greek": ["ἐννακόσια"], "latvian": ["deviņi", "simti"] },
+      {"hebrew": "מֵאוֹת֙", "greek": [], "latvian": [] },
+      {"hebrew": "שָׁנָ֔ה", "greek": ["πεντήκοντα"], "latvian": ["piecdesmit"] },
+      {"hebrew": "וַחֲמִשִּׁ֖ים", "greek": [], "latvian": [] },
+      {"hebrew": "שָׁנָ֑ה", "greek": ["ἔτη"], "latvian": ["gadi"] },
+      {"hebrew": "וַיָּמֹֽת׃", "greek": ["καὶ", "ἀπέθανεν"], "latvian": ["tad", "viņš", "nomira"] }
     ],
     "leftover_greek": [],
     "leftover_latvian": ["bija"]
   }
 ]
-If Latvian words in the verse remain unmapped, include them in leftover_latvian list. If greek remain unmapped, include the in leftover_greek list.
-data:
+
+now the task data:
