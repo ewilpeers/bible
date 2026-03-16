@@ -16,3 +16,14 @@ xml/*
 .vscode/*
 *.zip
 .ipynb_checkpoints/
+# Ignore split verse .txt files in subfolders (e.g. genesis/1/genesis_1_1.txt)
+bible/*/*/*.txt
+bible/*/*/*.json
+
+# Ignore loose .txt and .html in book folders (e.g. genesis/*.txt, genesis/*.html)
+bible/*/*.txt
+bible/*/*.html
+
+# BUT keep the root index
+!bible/index.html
+_scrap
