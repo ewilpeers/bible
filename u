@@ -78,6 +78,8 @@ all_books=$(ls -d */ | sort -V | sed 's|/||g')
 if echo "$all_books" | grep -q "^genesis$"; then
 	# Remove genesis from the list
 	other_books=$(echo "$all_books" | grep -v "^genesis$")
+	#remove excel wont remove if genesis is not in books, but whatever.
+	other_books=$(echo "$other_books | grep -v "^excel$")
 
 	# Get the first item, then insert genesis second
 	first=$(echo "$other_books" | head -1)
