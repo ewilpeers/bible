@@ -10,7 +10,7 @@ For audio bugs it is ok to open an issue with just the audio number (don't forge
 ## <img width="92" height="61" alt="image" src="https://github.com/user-attachments/assets/4f41c6d2-66d6-482e-b0f8-eb332d559b99" />🎵 Greek audio
 * 🎵 Deuter 5:1 has swapped Strongs numbers @ABP mousees<->kalesen
 
-## 🎵 Hebrew audio
+## ![108_flag-israel 247dc96f85](https://github.com/user-attachments/assets/46b847fc-6115-4be6-9721-a934997a5564) 🎵 Hebrew audio
 * 🎵 H0459 ???
 * 🎵 H430 wrong
 * 🎵 H503 2x announce results in wrong split
