@@ -1,3 +1,28 @@
+# Nice to have (TODO) features:
+* ensure greek comformity to rev 
+* color the morpology just as on [BLB](https://www.blueletterbible.org/tools/interlinear/mgnt/rev/1/1/)
+* verse / fragment views just as on BLB
+* 
+
+# known bugs (TOFIX):
+For audio bugs it is ok to open an issue with just the audio number (don't forget to prepend the h or g, as g0001.mp3 and h0001.mp3 are different)
+
+## <img width="40" height="26" alt="image" src="https://github.com/user-attachments/assets/1dd93ddd-48c5-4dbe-9e24-e40e9790859e" />🎵 Greek audio
+* 🎵 Deuter 5:1 has swapped Strongs numbers @ABP mousees<->kalesen
+
+## <img width="40" height="25" alt="image" src="https://github.com/user-attachments/assets/fc84e6cd-45fc-4f63-9e54-6c3be84d59fc" />🎵 Hebrew audio
+* 🎵 H0459 ???
+* 🎵 H430 wrong
+* 🎵 H503 2x announce results in wrong split
+* 🎵 H505 1.x wrong
+* 🎵 H7451 wrong
+* 🎵 H969 ???
+
+# known discrepancies (WONTFIX):
+* Nehemiah 7:68 has only samek in Hebrew (in MT it does not have a verse there at all, but Ezra 2:66 has)
+
+--
+
 Let me citate the matthewbarron.org Hbrw-> LXX mapping
 as seen on [https://matthewbarron.org/bible-versification-compared/](https://matthewbarron.org/bible-versification-compared/)
 # Bible Versification Compared
