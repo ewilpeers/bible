@@ -103,7 +103,7 @@
       { "hebrew": "אֲשֶׁ֥ר", "greek": ["τὰ", "ἐπὶ"], "latvian": ["kas", "virs"] },
       { "hebrew": "עַל", "greek": [], "latvian": [] },
       { "hebrew": "הָעֵצִ֖ים", "greek": ["τὰ", "ξύλα"], "latvian": ["malkas"] },
-      { "hebrew": "אֲשֶׁ֣ר", "greek": ["τὰ", "ἐπὶ"], "latvian": ["kura", "deg"] },
+      { "hebrew": "אֲשֶׁ֣ר", "greek": ["ἐπὶ"], "latvian": ["kura", "deg"] },
       { "hebrew": "עַל", "greek": [], "latvian": [] },
       { "hebrew": "הָאֵ֑שׁ", "greek": ["τοῦ", "πυρὸς"], "latvian": [] },
       { "hebrew": "אִשֵּׁ֛ה", "greek": ["κάρπωμα"], "latvian": ["tas", "ir", "uguns", "upuris"] },
@@ -112,7 +112,7 @@
       { "hebrew": "לַֽיהוָֽה׃", "greek": ["κυρίῳ"], "latvian": [] },
       { "hebrew": "פ", "greek": [], "latvian": [] }
     ],
-    "leftover_greek": ["ἐπὶ", "τοῦ", "θυσιαστηρίου"],
+    "leftover_greek": ["ἐπὶ", "τοῦ", "θυσιαστηρίου", "οἱ", "ἱερεῖς"],
     "leftover_latvian": ["uz", "altāra"]
   },
   {
@@ -172,7 +172,7 @@
       { "hebrew": "סָבִֽיב׃", "greek": ["κύκλῳ"], "latvian": [] }
     ],
     "leftover_greek": ["οἱ", "ἱερεῖς"],
-    "leftover_latvian": ["priesteri"]
+    "leftover_latvian": []
   },
   {
     "hebrew_words": [
@@ -192,7 +192,7 @@
       { "hebrew": "הַֽמְכַסֶּ֣ה", "greek": ["τῆς", "κοιλίας"], "latvian": ["kas", "pārklāj"] },
       { "hebrew": "אֶת", "greek": [], "latvian": [] },
       { "hebrew": "הַקֶּ֔רֶב", "greek": [], "latvian": ["iekšas"] },
-      { "hebrew": "וְאֵת֙", "greek": ["καὶ", "πᾶν", "τὸ", "στέαρ"], "latvian": ["un", "visi", "tauki"] },
+      { "hebrew": "וְאֵת֙", "greek": [], "latvian": ["un", "visi", "tauki"] },
       { "hebrew": "כָּל", "greek": [], "latvian": [] },
       { "hebrew": "הַחֵ֔לֶב", "greek": [], "latvian": [] },
       { "hebrew": "אֲשֶׁ֖ר", "greek": [], "latvian": ["kas", "ir", "pie"] },
@@ -272,7 +272,7 @@
       { "hebrew": "סָבִֽיב׃", "greek": ["κύκλῳ"], "latvian": [] }
     ],
     "leftover_greek": ["οἱ", "ἱερεῖς"],
-    "leftover_latvian": ["priesteri"]
+    "leftover_latvian": []
   },
   {
     "hebrew_words": [
@@ -332,7 +332,7 @@
       { "hebrew": "חֵ֖לֶב", "greek": ["τὸ", "στέαρ"], "latvian": [] },
       { "hebrew": "לַיהוָֽה׃", "greek": ["τῷ", "κυρίῳ"], "latvian": ["Tam", "Kungam"] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["τῷ", "κυρίῳ"],
     "leftover_latvian": []
   },
   {

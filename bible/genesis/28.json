@@ -63,7 +63,7 @@
       { "hebrew": "אֶת", "greek": ["τὴν"], "latvian": [] },
       { "hebrew": "בִּרְכַּ֣ת", "greek": ["εὐλογίαν"], "latvian": ["svētību"] },
       { "hebrew": "אַבְרָהָ֔ם", "greek": ["Αβρααμ"], "latvian": ["Ābrahāma"] },
-      { "hebrew": "לְךָ֖", "greek": ["σοὶ"], "latvian": ["tev"] },
+      { "hebrew": "לְךָ֖", "greek": ["σοὶ"], "latvian": [] },
       { "hebrew": "וּלְזַרְעֲךָ֣", "greek": ["καὶ", "τῷ", "σπέρματί", "σου"], "latvian": ["un", "taviem", "pēcnācējiem"] },
       { "hebrew": "אִתָּ֑ךְ", "greek": ["μετὰ", "σέ"], "latvian": [] },
       { "hebrew": "לְרִשְׁתְּךָ֙", "greek": ["κληρονομῆσαι"], "latvian": ["ka", "tu", "iemanto"] },
@@ -229,7 +229,7 @@
       { "hebrew": "וְרֹאשׁ֖וֹ", "greek": ["ἧς", "ἡ", "κεφαλὴ"], "latvian": ["bet", "to", "augšgals"] },
       { "hebrew": "מַגִּ֣יעַ", "greek": ["ἀφικνεῖτο"], "latvian": ["sniedzās"] },
       { "hebrew": "הַשָּׁמָ֑יְמָה", "greek": ["εἰς", "τὸν", "οὐρανόν"], "latvian": ["debesīs"] },
-      { "hebrew": "וְהִנֵּה֙", "greek": ["καὶ", "ἰδοὺ"], "latvian": ["un", "redzi"] },
+      { "hebrew": "וְהִנֵּה֙", "greek": ["καὶ"], "latvian": ["un", "redzi"] },
       { "hebrew": "מַלְאֲכֵ֣י", "greek": ["οἱ", "ἄγγελοι"], "latvian": ["eņģeļi"] },
       { "hebrew": "אֱלֹהִ֔ים", "greek": ["τοῦ", "θεοῦ"], "latvian": ["Dieva"] },
       { "hebrew": "עֹלִ֥ים", "greek": ["ἀνέβαινον"], "latvian": ["kāpa", "augšup"] },
@@ -269,13 +269,13 @@
     "hebrew_words": [
       { "hebrew": "וְהָיָ֤ה", "greek": ["καὶ", "ἔσται"], "latvian": ["Un"] },
       { "hebrew": "זַרְעֲךָ֙", "greek": ["τὸ", "σπέρμα", "σου"], "latvian": ["tavi", "pēcnācēji"] },
-      { "hebrew": "כַּעֲפַ֣ר", "greek": ["ὡς", "ἡ", "ἄμμος"], "latvian": ["kā", "putekļi"] },
+      { "hebrew": "כַּעֲפַ֣ר", "greek": ["ὡς", "ἡ", "ἄμμος"], "latvian": ["kā"] },
       { "hebrew": "הָאָ֔רֶץ", "greek": ["τῆς", "γῆς"], "latvian": ["zemes"] },
       { "hebrew": "וּפָרַצְתָּ֛", "greek": ["καὶ", "πλατυνθήσεται"], "latvian": ["un", "tu", "izpletīsies"] },
       { "hebrew": "יָ֥מָּה", "greek": ["ἐπὶ", "θάλασσαν"], "latvian": ["uz", "rietumiem"] },
       { "hebrew": "וָקֵ֖דְמָה", "greek": ["καὶ", "ἐπὶ", "ἀνατολάς"], "latvian": ["un", "austrumiem"] },
       { "hebrew": "וְצָפֹ֣נָה", "greek": ["καὶ", "ἐπὶ", "βορρᾶν"], "latvian": ["uz", "ziemeļiem"] },
-      { "hebrew": "וָנֶ֑גְבָּה", "greek": ["καὶ", "ἐπὶ", "λίβα"], "latvian": ["un", "dienvidiem"] },
+      { "hebrew": "וָנֶ֑גְבָּה", "greek": ["καὶ", "λίβα"], "latvian": ["un", "dienvidiem"] },
       { "hebrew": "וְנִבְרֲכ֥וּ", "greek": ["καὶ", "ἐνευλογηθήσονται"], "latvian": ["un", "būs", "svētītas"] },
       { "hebrew": "בְךָ֛", "greek": ["ἐν", "σοὶ"], "latvian": ["tevī"] },
       { "hebrew": "כָּל", "greek": ["πᾶσαι"], "latvian": ["visas"] },
@@ -284,7 +284,7 @@
       { "hebrew": "וּבְזַרְעֶֽךָ׃", "greek": ["καὶ", "ἐν", "τῷ", "σπέρματί", "σου"], "latvian": ["un", "tavos", "pēcnācējos"] }
     ],
     "leftover_greek": ["ἐπ"],
-    "leftover_latvian": ["būs", "būs", "pīšļi"]
+    "leftover_latvian": ["būs", "pīšļi"]
   },
   {
     "hebrew_words": [
@@ -382,8 +382,8 @@
       { "hebrew": "שֵֽׁם", "greek": ["τὸ", "ὄνομα"], "latvian": ["vārdu"] },
       { "hebrew": "הַמָּק֥וֹם", "greek": ["τοῦ", "τόπου"], "latvian": ["vietas"] },
       { "hebrew": "הַה֖וּא", "greek": ["ἐκείνου"], "latvian": ["šīs"] },
-      { "hebrew": "בֵּֽית", "greek": ["Οἶκος"], "latvian": ["nams"] },
-      { "hebrew": "אֵ֑ל", "greek": ["θεοῦ"], "latvian": ["#Dieva"] },
+      { "hebrew": "בֵּֽית", "greek": ["Οἶκος"], "latvian": [] },
+      { "hebrew": "אֵ֑ל", "greek": ["θεοῦ"], "latvian": [] },
       { "hebrew": "וְאוּלָ֛ם", "greek": ["καὶ"], "latvian": ["bet"] },
       { "hebrew": "ל֥וּז", "greek": ["Ουλαμλους"], "latvian": ["Lūza"] },
       { "hebrew": "שֵׁם", "greek": ["ὄνομα"], "latvian": [] },
@@ -391,7 +391,7 @@
       { "hebrew": "לָרִאשֹׁנָֽה׃", "greek": ["τὸ", "πρότερον"], "latvian": ["iepriekš"] }
     ],
     "leftover_greek": ["Ιακωβ", "ἦν"],
-    "leftover_latvian": ["Bētele", "saucca", "sauca"]
+    "leftover_latvian": ["Bētele", "sauca"]
   },
   {
     "hebrew_words": [

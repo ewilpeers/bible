@@ -27,20 +27,20 @@
   },
   {
     "hebrew_words": [
-      { "hebrew": "תֻּמַּ֣ת", "greek": ["τελειότης"], "latvian": ["Sirdsšķīstība"] },
-      { "hebrew": "יְשָׁרִ֣ים", "greek": ["ευθειών"], "latvian": ["tiklos"] },
-      { "hebrew": "תַּנְחֵ֑ם", "greek": ["οδηγήσει", "αυτούς"], "latvian": ["vadīs"] },
-      { "hebrew": "וְסֶ֖לֶף", "greek": ["καὶ", "υποσκελισμός"], "latvian": ["bet"] },
-      { "hebrew": "בּוֹגְדִ֣ים", "greek": ["αθετούντων"], "latvian": ["nelietīga", "ļaunprātība"] },
+      { "hebrew": "תֻּמַּ֣ת", "greek": [], "latvian": ["Sirdsšķīstība"] },
+      { "hebrew": "יְשָׁרִ֣ים", "greek": [], "latvian": ["tiklos"] },
+      { "hebrew": "תַּנְחֵ֑ם", "greek": [], "latvian": ["vadīs"] },
+      { "hebrew": "וְסֶ֖לֶף", "greek": ["καὶ"], "latvian": ["bet"] },
+      { "hebrew": "בּוֹגְדִ֣ים", "greek": [], "latvian": ["nelietīga", "ļaunprātība"] },
       { "hebrew": "ושדם", "greek": [], "latvian": ["nievātājus"] },
-      { "hebrew": "יְשָׁדֵּֽם׃", "greek": ["προνομεύσει", "αυτούς"], "latvian": ["galīgi", "sagraus"] }
+      { "hebrew": "יְשָׁדֵּֽם׃", "greek": [], "latvian": ["galīgi", "sagraus"] }
     ],
     "leftover_greek": ["ἀποθανὼν", "δίκαιος", "ἔλιπεν", "μετάμελον", "πρόχειρος", "δὲ", "γίνεται", "ἐπίχαρτος", "ἀσεβῶν", "ἀπώλεια"],
     "leftover_latvian": []
   },
   {
     "hebrew_words": [
-      { "hebrew": "לֹא", "greek": ["οὐκ"], "latvian": ["ne"] },
+      { "hebrew": "לֹא", "greek": ["ουκ"], "latvian": ["ne"] },
       { "hebrew": "יוֹעִ֣יל", "greek": ["ωφελήσει"], "latvian": ["palīdzēs"] },
       { "hebrew": "ה֭וֹן", "greek": ["υπάρχοντα"], "latvian": ["Manta"] },
       { "hebrew": "בְּי֣וֹם", "greek": ["εν", "ημέρα"], "latvian": ["dienā"] },
@@ -49,7 +49,7 @@
       { "hebrew": "תַּצִּ֥יל", "greek": ["ρύσεται"], "latvian": ["glābj"] },
       { "hebrew": "מִמָּֽוֶת׃", "greek": ["από", "θανάτου"], "latvian": ["no", "nāves"] }
     ],
-    "leftover_greek": ["τελειότης", "ευθειών", "οδηγήσει", "αυτούς", "αυτούς", "και", "υποσκελισμός", "αθετούντων", "προνομεύσει", "ουκ ωφελήσει"],
+    "leftover_greek": ["τελειότης", "ευθειών", "οδηγήσει", "αυτούς", "αυτούς", "και", "υποσκελισμός", "αθετούντων", "προνομεύσει"],
     "leftover_latvian": ["neko"]
   },
   {
@@ -347,17 +347,17 @@
       { "hebrew": "שֹׁ֣חֵֽר", "greek": ["τεκταινόμενος"], "latvian": ["Kas", "cenšas"] },
       { "hebrew": "ט֭וֹב", "greek": ["ἀγαθὰ"], "latvian": ["pēc", "kā", "laba"] },
       { "hebrew": "יְבַקֵּ֣שׁ", "greek": ["ζητεῖ"], "latvian": [] },
-      { "hebrew": "רָצ֑וֹן", "greek": ["χάριν", "ἀγαθήν"], "latvian": ["tam", "labs", "arī", "gadīs"] },
+      { "hebrew": "רָצ֑וֹן", "greek": ["χάριν", "ἀγαθήν"], "latvian": ["tam", "labs", "arī"] },
       { "hebrew": "וְדֹרֵ֖שׁ", "greek": ["ἐκζητοῦντα", "δὲ"], "latvian": ["bet", "kas", "dzenas"] },
       { "hebrew": "רָעָ֣ה", "greek": ["κακά"], "latvian": ["pēc", "nelaimes"] },
-      { "hebrew": "תְבוֹאֶֽנּוּ׃", "greek": ["καταλήμψεται", "αὐτόν"], "latvian": ["tam", "arī", "nepaiet", "secen"] }
+      { "hebrew": "תְבוֹאֶֽנּוּ׃", "greek": ["καταλήμψεται", "αὐτόν"], "latvian": ["tam", "arī", "secen"] }
     ],
     "leftover_greek": [],
     "leftover_latvian": ["gadās", "nepaies", "tā"]
   },
   {
     "hebrew_words": [
-      { "hebrew": "בּוֹטֵ֣חַ", "greek": ["ὁ", "πεποιθὼς"], "latvian": ["Kas", "paļaujas"] },
+      { "hebrew": "בּוֹטֵ֣חַ", "greek": ["ὁ", "πεποιθὼς"], "latvian": ["Kas"] },
       { "hebrew": "בְּ֭עָשְׁרוֹ", "greek": ["ἐπὶ", "πλούτῳ"], "latvian": ["uz", "savu", "bagātību"] },
       { "hebrew": "ה֣וּא", "greek": ["οὗτος"], "latvian": ["tas"] },
       { "hebrew": "יִפֹּ֑ל", "greek": ["πεσεῖται"], "latvian": ["ies", "bojā"] },
@@ -401,7 +401,7 @@
       { "hebrew": "צַ֭דִּיק", "greek": ["ὁ", "μὲν", "δίκαιος"], "latvian": ["ja", "jau", "taisnīgajam"] },
       { "hebrew": "בָּאָ֣רֶץ", "greek": [], "latvian": ["virs", "zemes"] },
       { "hebrew": "יְשֻׁלָּ֑ם", "greek": ["μόλις", "σῴζεται"], "latvian": ["tā", "tiek", "atmaksāts"] },
-      { "hebrew": "אַ֝֗ף", "greek": ["ὁ", "δὲ"], "latvian": ["cik", "tad", "vēl", "vairāk"] },
+      { "hebrew": "אַ֝֗ף", "greek": ["ὁ"], "latvian": ["cik", "tad", "vēl", "vairāk"] },
       { "hebrew": "כִּֽי", "greek": ["ἁμαρτωλὸς"], "latvian": [] },
       { "hebrew": "רָשָׁ֥ע", "greek": ["ἀσεβὴς"], "latvian": ["bezdievim"] },
       { "hebrew": "וְחוֹטֵֽא׃", "greek": ["ποῦ", "φανεῖται"], "latvian": ["un", "grēciniekam"] }

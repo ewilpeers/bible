@@ -47,7 +47,7 @@
       { "hebrew": "מַחְשִׁ֔ים", "greek": ["σιωπῶμεν"], "latvian": [] },
       { "hebrew": "מִקַּ֣חַת", "greek": ["λαβεῖν"], "latvian": ["to", "izraut"] },
       { "hebrew": "אֹתָ֔הּ", "greek": ["αὐτὴν"], "latvian": [] },
-      { "hebrew": "מִיַּ֖ד", "greek": ["ἐκ", "χειρὸς"], "latvian": ["no", "arameišu", "ķēniņa", "rokas"] },
+      { "hebrew": "מִיַּ֖ד", "greek": ["ἐκ", "χειρὸς"], "latvian": ["no", "ķēniņa", "rokas"] },
       { "hebrew": "מֶ֥לֶךְ", "greek": ["βασιλέως"], "latvian": [] },
       { "hebrew": "אֲרָֽם׃", "greek": ["Συρίας"], "latvian": [] }
     ],
@@ -66,8 +66,8 @@
       { "hebrew": "גִּלְעָ֑ד", "greek": ["Γαλααδ"], "latvian": [] },
       { "hebrew": "וַיֹּ֤אמֶר", "greek": ["καὶ", "εἶπεν"], "latvian": ["Un", "Jošafats", "atbildēja"] },
       { "hebrew": "יְהֽוֹשָׁפָט֙", "greek": ["Ιωσαφατ"], "latvian": [] },
-      { "hebrew": "אֶל", "greek": ["πρὸς"], "latvian": ["Israēla", "ķēniņam"] },
-      { "hebrew": "מֶ֣לֶךְ", "greek": ["βασιλέα"], "latvian": [] },
+      { "hebrew": "אֶל", "greek": [], "latvian": ["Israēla", "ķēniņam"] },
+      { "hebrew": "מֶ֣לֶךְ", "greek": [], "latvian": [] },
       { "hebrew": "יִשְׂרָאֵ֔ל", "greek": ["Ισραηλ"], "latvian": [] },
       { "hebrew": "כָּמ֧וֹנִי", "greek": ["καθὼς", "ἐγὼ", "οὕτως"], "latvian": ["Man", "klāsies", "kā", "tev", "klāsies"] },
       { "hebrew": "כָמ֛וֹךָ", "greek": ["καὶ", "σύ"], "latvian": [] },
@@ -198,7 +198,7 @@
     "hebrew_words": [
       { "hebrew": "וּמֶ֣לֶךְ", "greek": ["καὶ", "ὁ", "βασιλεὺς"], "latvian": ["Kad", "Israēla", "ķēniņš"] },
       { "hebrew": "יִשְׂרָאֵ֡ל", "greek": ["Ισραηλ"], "latvian": [] },
-      { "hebrew": "וִֽיהוֹשָׁפָ֣ט", "greek": ["καὶ", "Ιωσαφατ"], "latvian": ["un", "Jūdas", "ķēniņš", "Jošafats"] },
+      { "hebrew": "וִֽיהוֹשָׁפָ֣ט", "greek": ["καὶ", "Ιωσαφατ"], "latvian": ["un", "Jūdas", "ķēniņš"] },
       { "hebrew": "מֶֽלֶךְ", "greek": ["βασιλεὺς"], "latvian": [] },
       { "hebrew": "יְהוּדָ֡ה", "greek": ["Ιουδα"], "latvian": [] },
       { "hebrew": "יֹשְׁבִים֩", "greek": ["ἐκάθηντο"], "latvian": ["sēdēja"] },
@@ -207,7 +207,7 @@
       { "hebrew": "כִּסְא֜וֹ", "greek": ["τοῦ", "θρόνου", "αὐτοῦ"], "latvian": [] },
       { "hebrew": "מְלֻבָּשִׁ֤ים", "greek": ["ἔνοπλοι"], "latvian": ["savās", "goda", "drānās", "tērpušies"] },
       { "hebrew": "בְּגָדִים֙", "greek": [], "latvian": [] },
-      { "hebrew": "בְּגֹ֔רֶן", "greek": ["ἐν", "ταῖς", "πύλαις"], "latvian": ["uz", "atklāta", "laukuma", "pie", "iejas"] },
+      { "hebrew": "בְּגֹ֔רֶן", "greek": ["ἐν", "ταῖς", "πύλαις"], "latvian": ["uz", "atklāta", "laukuma", "pie"] },
       { "hebrew": "פֶּ֖תַח", "greek": [], "latvian": [] },
       { "hebrew": "שַׁ֣עַר", "greek": [], "latvian": ["Samarijas", "vārtos"] },
       { "hebrew": "שֹׁמְר֑וֹן", "greek": ["Σαμαρείας"], "latvian": [] },
@@ -228,14 +228,14 @@
       { "hebrew": "כְּנַעֲנָ֖ה", "greek": ["Χανανα"], "latvian": [] },
       { "hebrew": "קַרְנֵ֣י", "greek": ["κέρατα"], "latvian": ["dzelzs", "ragus"] },
       { "hebrew": "בַרְזֶ֑ל", "greek": ["σιδηρᾶ"], "latvian": [] },
-      { "hebrew": "וַיֹּ֙אמֶר֙", "greek": ["καὶ", "εἶπεν"], "latvian": ["un", "sacīja"] },
+      { "hebrew": "וַיֹּ֙אמֶר֙", "greek": ["καὶ", "εἶπεν"], "latvian": ["sacīja"] },
       { "hebrew": "כֹּֽה", "greek": ["τάδε"], "latvian": ["Tā", "saka"] },
       { "hebrew": "אָמַ֣ר", "greek": ["λέγει"], "latvian": [] },
       { "hebrew": "יְהוָ֔ה", "greek": ["κύριος"], "latvian": ["Tas", "Kungs"] },
       { "hebrew": "בְּאֵ֛לֶּה", "greek": ["ἐν", "τούτοις"], "latvian": ["ar", "tādiem", "tev", "jābada"] },
       { "hebrew": "תְּנַגַּ֥ח", "greek": ["κερατιεῖς"], "latvian": [] },
       { "hebrew": "אֶת", "greek": ["τὴν"], "latvian": [] },
-      { "hebrew": "אֲרָ֖ם", "greek": ["Συρίαν"], "latvian": ["Aramu"] },
+      { "hebrew": "אֲרָ֖ם", "greek": ["Συρίαν"], "latvian": [] },
       { "hebrew": "עַד", "greek": ["ἕως"], "latvian": ["tiekāms", "tu", "to", "būsi", "pieveicis"] },
       { "hebrew": "כַּלֹּתָֽם׃", "greek": ["συντελεσθῇ"], "latvian": [] }
     ],
@@ -368,7 +368,7 @@
       { "hebrew": "אֶת", "greek": ["πάντα"], "latvian": [] },
       { "hebrew": "כָּל", "greek": [], "latvian": ["visu"] },
       { "hebrew": "יִשְׂרָאֵל֙", "greek": ["τὸν", "Ισραηλ"], "latvian": ["Israēlu"] },
-      { "hebrew": "נְפֹצִ֣ים", "greek": ["διεσπαρμένον"], "latvian": ["izkliedinātu"] },
+      { "hebrew": "נְפֹצִ֣ים", "greek": ["διεσπαρμένον"], "latvian": [] },
       { "hebrew": "אֶל", "greek": ["ἐν", "τοῖς"], "latvian": ["pa", "kalniem"] },
       { "hebrew": "הֶהָרִ֔ים", "greek": ["ὄρεσιν"], "latvian": [] },
       { "hebrew": "כַּצֹּ֕אן", "greek": ["ὡς", "ποίμνιον"], "latvian": ["kā", "avis"] },
@@ -664,7 +664,7 @@
       { "hebrew": "אֶת", "greek": ["τοῖς", "ἄρχουσι"], "latvian": [] },
       { "hebrew": "שָׂרֵי֩", "greek": [], "latvian": [] },
       { "hebrew": "הָרֶ֨כֶב", "greek": ["τῶν", "ἁρμάτων", "αὐτοῦ"], "latvian": [] },
-      { "hebrew": "אֲשֶׁר", "greek": [], "latvian": ["tādam", "tam", "bija"] },
+      { "hebrew": "אֲשֶׁר", "greek": [], "latvian": ["tam", "bija"] },
       { "hebrew": "ל֜וֹ", "greek": [], "latvian": [] },
       { "hebrew": "שְׁלֹשִׁ֤ים", "greek": ["τριάκοντα", "καὶ", "δυσὶν"], "latvian": ["trīsdesmit", "divi"] },
       { "hebrew": "וּשְׁנַ֙יִם֙", "greek": [], "latvian": [] },
@@ -861,7 +861,7 @@
   },
   {
     "hebrew_words": [
-      { "hebrew": "וַיִּשְׁכַּ֥ב", "greek": ["καὶ", "ἐκοιμήθη"], "latvian": ["Un", "Ahabs", "gulējās"] },
+      { "hebrew": "וַיִּשְׁכַּ֥ב", "greek": ["καὶ", "ἐκοιμήθη"], "latvian": ["Un", "Ahabs"] },
       { "hebrew": "אַחְאָ֖ב", "greek": ["Αχααβ"], "latvian": [] },
       { "hebrew": "עִם", "greek": ["μετὰ"], "latvian": ["pie", "saviem", "tēviem"] },
       { "hebrew": "אֲבֹתָ֑יו", "greek": ["τῶν", "πατέρων", "αὐτοῦ"], "latvian": [] },
@@ -937,8 +937,8 @@
       { "hebrew": "וּֽמְקַטְּרִ֖ים", "greek": ["καὶ", "ἐθυμίων"], "latvian": ["Un", "kvēpināt"] },
       { "hebrew": "בַּבָּמֽוֹת׃", "greek": ["ἐν", "τοῖς", "ὑψηλοῖς"], "latvian": ["uz", "tām", "augstienēm"] }
     ],
-    "leftover_greek": ["εἰρήνευσεν", "Ιωσαφατ", "μετὰ", "βασιλέως", "Ισραηλ"],
-    "leftover_latvian": ["Jošafats", "dzīvoja", "mierā", "ar", "Israēla", "ķēniņu"]
+    "leftover_greek": [],
+    "leftover_latvian": []
   },
   {
     "hebrew_words": [
@@ -948,8 +948,8 @@
       { "hebrew": "מֶ֥לֶךְ", "greek": ["βασιλέως"], "latvian": ["Israēla", "ķēniņu"] },
       { "hebrew": "יִשְׂרָאֵֽל׃", "greek": ["Ισραηλ"], "latvian": [] }
     ],
-    "leftover_greek": ["καὶ", "τὰ", "λοιπὰ", "τῶν", "τῶν", "τῶν", "λόγων", "λόγων", "αἱ", "δυναστεῖαι", "αὐτοῦ", "ὅσα", "ἐποίησεν", "οὐκ", "ἰδοὺ", "ταῦτα", "γεγραμμένα", "ἐν", "βιβλίῳ", "ἡμερῶν", "βασιλέων", "Ιουδα"],
-    "leftover_latvian": ["kas", "vēl", "stāstāms", "par", "Jošafatu", "un", "visi", "viņa", "varoņdarbi", "kādus", "viņš", "viņš", "veica", "kā", "karojis", "tas", "viss", "ir", "rakstīts", "Jūdas", "Laiku", "grāmatā"]
+    "leftover_greek": [],
+    "leftover_latvian": ["un"]
   },
   {
     "hebrew_words": [
@@ -971,8 +971,8 @@
       { "hebrew": "לְמַלְכֵ֥י", "greek": ["τῶν", "βασιλέων"], "latvian": [] },
       { "hebrew": "יְהוּדָֽה׃", "greek": ["Ιουδα"], "latvian": [] }
     ],
-    "leftover_greek": ["βασιλεύς", "ουκ ην", "εστηκώς", "Ιδουμαία"],
-    "leftover_latvian": ["izdzina", "no", "no", "zemes", "visus", "netikļus", "bija", "atlikuši", "tēva", "Asas", "laikiem"]
+    "leftover_greek": [],
+    "leftover_latvian": []
   },
   {
     "hebrew_words": [
@@ -987,8 +987,8 @@
       { "hebrew": "מִן", "greek": [], "latvian": [] },
       { "hebrew": "הָאָֽרֶץ׃", "greek": [], "latvian": [] }
     ],
-    "leftover_greek": ["βασιλεύς", "ουκ", "ην", "εστηκώς", "εν", "Ιδουμαία", "και", "Ιωσαφάτ", "εποίησε", "νήας", "Θαρσείς", "του", "του", "πορεύεσθαι", "εις", "Οφίρ", "ένεκεν", "χρυσίου", "επορεύοντο", "ότι", "συνετρίβησαν", "αι", "νήες", "Γασιών", "Γάβερ", "ουκ ην"],
-    "leftover_latvian": ["Edomā", "tolaik", "ķēniņa", "ķēniņa", "bet", "tikai", "vietnieks"]
+    "leftover_greek": ["βασιλεύς", "ουκ", "ην", "εστηκώς", "εν", "Ιδουμαία"],
+    "leftover_latvian": []
   },
   {
     "hebrew_words": [
@@ -998,55 +998,55 @@
       { "hebrew": "נִצָּ֥ב", "greek": [], "latvian": ["ķēniņa"] },
       { "hebrew": "מֶֽלֶךְ׃", "greek": [], "latvian": ["bet", "tikai", "ķēniņa", "vietnieks"] }
     ],
-    "leftover_greek": ["τότε", "είπεν", "Οχοζίας", "υιός", "Αχαάβ", "προς", "Ιωσαφάτ", "Ιωσαφάτ", "πορευέσθωσαν", "οι", "δούλοί μου", "μετά", "των", "δούλων σου", "ουκ", "ηθέλησεν", "και", "εποίησε", "νήας", "Θαρσείς", "του", "του", "πορεύεσθαι", "εις", "Οφίρ", "ένεκεν", "χρυσίου", "επορεύοντο", "ότι", "συνετρίβησαν", "αι", "νήες", "εν", "Γασιών", "Γάβερ"],
-    "leftover_latvian": ["Jošafats", "lika", "taisīt", "Taršišas", "kuģus", "lai", "tie", "tie", "varētu", "doties", "uz", "Ofīru", "pēc", "zelta", "tur", "nenonāca", "jo", "pie", "Ecjonas", "Geberas", "tos", "sadragāja", "vētra"]
+    "leftover_greek": ["Ιωσαφάτ", "ουκ", "και", "εποίησε", "νήας", "Θαρσείς", "του", "του", "πορεύεσθαι", "εις", "Οφίρ", "ένεκεν", "χρυσίου", "επορεύοντο", "ότι", "συνετρίβησαν", "αι", "νήες", "εν", "Γασιών", "Γάβερ"],
+    "leftover_latvian": []
   },
   {
     "hebrew_words": [
       { "hebrew": "יְהוֹשָׁפָ֡ט", "greek": ["και", "Ιωσαφάτ"], "latvian": ["Jošafats", "lika", "taisīt"] },
       { "hebrew": "עשר", "greek": [], "latvian": [] },
-      { "hebrew": "עָשָׂה֩", "greek": ["ἐποίησε"], "latvian": [] },
-      { "hebrew": "אֳנִיּ֨וֹת", "greek": ["νῆας"], "latvian": ["Taršišas", "kuģus"] },
-      { "hebrew": "תַּרְשִׁ֜ישׁ", "greek": ["Θαρσείς"], "latvian": [] },
-      { "hebrew": "לָלֶ֧כֶת", "greek": ["του", "πορεύεσθαι"], "latvian": ["lai", "tie", "varētu", "doties"] },
-      { "hebrew": "אוֹפִ֛ירָה", "greek": ["εἰς", "Ωφιρ"], "latvian": ["uz", "Ofīru"] },
-      { "hebrew": "לַזָּהָ֖ב", "greek": ["ἕνεκεν", "του", "χρυσίου"], "latvian": ["pēc", "zelta"] },
-      { "hebrew": "וְלֹ֣א", "greek": ["και", "ουκ"], "latvian": ["Bet", "tie", "tur", "nenonāca"] },
-      { "hebrew": "הָלָ֑ךְ", "greek": ["ἐπορεύοντο"], "latvian": [] },
-      { "hebrew": "כִּֽי", "greek": ["ὅτι"], "latvian": ["jo"] },
-      { "hebrew": "נשברה", "greek": ["συνετρίβησαν"], "latvian": ["pie", "Ecjonas", "Geberas", "tos", "sadragāja", "vētra"] },
+      { "hebrew": "עָשָׂה֩", "greek": [], "latvian": [] },
+      { "hebrew": "אֳנִיּ֨וֹת", "greek": [], "latvian": ["Taršišas", "kuģus"] },
+      { "hebrew": "תַּרְשִׁ֜ישׁ", "greek": [], "latvian": [] },
+      { "hebrew": "לָלֶ֧כֶת", "greek": [], "latvian": ["lai", "tie", "varētu", "doties"] },
+      { "hebrew": "אוֹפִ֛ירָה", "greek": [], "latvian": ["uz", "Ofīru"] },
+      { "hebrew": "לַזָּהָ֖ב", "greek": [], "latvian": ["pēc", "zelta"] },
+      { "hebrew": "וְלֹ֣א", "greek": ["ουκ"], "latvian": ["Bet", "tie", "tur", "nenonāca"] },
+      { "hebrew": "הָלָ֑ךְ", "greek": [], "latvian": [] },
+      { "hebrew": "כִּֽי", "greek": [], "latvian": ["jo"] },
+      { "hebrew": "נשברה", "greek": [], "latvian": ["pie", "Ecjonas", "Geberas", "tos", "sadragāja", "vētra"] },
       { "hebrew": "נִשְׁבְּר֥וּ", "greek": [], "latvian": [] },
-      { "hebrew": "אֳנִיּ֖וֹת", "greek": ["αἱ", "νῆες"], "latvian": [] },
-      { "hebrew": "בְּעֶצְי֥וֹן", "greek": ["εν", "Γασιὼν"], "latvian": [] },
-      { "hebrew": "גָּֽבֶר׃", "greek": ["Γάβερ"], "latvian": [] }
+      { "hebrew": "אֳנִיּ֖וֹת", "greek": [], "latvian": [] },
+      { "hebrew": "בְּעֶצְי֥וֹן", "greek": [], "latvian": [] },
+      { "hebrew": "גָּֽבֶר׃", "greek": [], "latvian": [] }
     ],
-    "leftover_greek": ["και", "εκοιμήθη Ιωσαφάτ", "μετά", "των", "πατέρων αυτού", "ετάφη", "παρά", "τοις", "πατράσιν αυτού", "πόλει", "Δαυίδ", "πατρός αυτού", "εβασίλευσεν", "Ιωράμ", "υιός αυτού", "αντ'", "αυτού", "τότε", "είπεν", "Οχοζίας", "υιός", "Αχαάβ", "προς", "Ιωσαφάτ", "πορευέσθωσαν", "οι", "δούλοί μου", "δούλων σου", "ηθέλησεν"],
-    "leftover_latvian": ["Tolaik", "Ahaba", "dēls", "Ahasja", "sacīja", "Jošafatam", "mani", "kalpi", "brauc", "kopā", "ar", "taviem", "kalpiem", "kuģiem", "to", "nevēlējās"]
+    "leftover_greek": ["μετά", "των", "τότε", "είπεν", "Οχοζίας", "υιός", "Αχαάβ", "προς", "Ιωσαφάτ", "πορευέσθωσαν", "οι", "ηθέλησεν", "δούλοί", "μου", "δούλων", "σου"],
+    "leftover_latvian": []
   },
   {
     "hebrew_words": [
-      { "hebrew": "אָ֠ז", "greek": ["τότε"], "latvian": ["Tolaik"] },
-      { "hebrew": "אָמַ֞ר", "greek": ["εἶπεν"], "latvian": ["Ahaba", "dēls", "Ahasja", "sacīja"] },
-      { "hebrew": "אֲחַזְיָ֤הוּ", "greek": ["Οχοζίας"], "latvian": [] },
-      { "hebrew": "בֶן", "greek": ["υἱὸς"], "latvian": [] },
-      { "hebrew": "אַחְאָב֙", "greek": ["Αχαάβ"], "latvian": [] },
-      { "hebrew": "אֶל", "greek": ["πρὸς"], "latvian": ["Jošafatam"] },
-      { "hebrew": "יְה֣וֹשָׁפָ֔ט", "greek": ["Ιωσαφατ"], "latvian": [] },
-      { "hebrew": "יֵלְכ֧וּ", "greek": ["πορευέσθωσαν"], "latvian": ["Lai", "mani", "kalpi", "brauc", "kopā"] },
-      { "hebrew": "עֲבָדַ֛י", "greek": ["οἱ", "δοῦλοί", "μου"], "latvian": [] },
+      { "hebrew": "אָ֠ז", "greek": [], "latvian": ["Tolaik"] },
+      { "hebrew": "אָמַ֞ר", "greek": [], "latvian": ["Ahaba", "dēls", "Ahasja", "sacīja"] },
+      { "hebrew": "אֲחַזְיָ֤הוּ", "greek": [], "latvian": [] },
+      { "hebrew": "בֶן", "greek": ["υιός"], "latvian": [] },
+      { "hebrew": "אַחְאָב֙", "greek": [], "latvian": [] },
+      { "hebrew": "אֶל", "greek": [], "latvian": ["Jošafatam"] },
+      { "hebrew": "יְה֣וֹשָׁפָ֔ט", "greek": ["Ιωσαφάτ"], "latvian": [] },
+      { "hebrew": "יֵלְכ֧וּ", "greek": [], "latvian": ["Lai", "mani", "kalpi", "brauc", "kopā"] },
+      { "hebrew": "עֲבָדַ֛י", "greek": [], "latvian": [] },
       { "hebrew": "עִם", "greek": ["μετά"], "latvian": [] },
-      { "hebrew": "עֲבָדֶ֖יךָ", "greek": ["των", "δούλων", "σου"], "latvian": ["ar", "taviem", "kalpiem"] },
+      { "hebrew": "עֲבָדֶ֖יךָ", "greek": ["των"], "latvian": ["ar", "taviem", "kalpiem"] },
       { "hebrew": "בָּאֳנִיּ֑וֹת", "greek": [], "latvian": ["uz", "kuģiem"] },
-      { "hebrew": "וְלֹ֥א", "greek": ["και", "οὐκ"], "latvian": ["Bet", "Jošafats", "to", "nevēlējās"] },
-      { "hebrew": "אָבָ֖ה", "greek": ["ἠθέλησεν"], "latvian": [] },
-      { "hebrew": "יְהוֹשָׁפָֽט׃", "greek": ["Ιωσαφατ"], "latvian": [] }
+      { "hebrew": "וְלֹ֥א", "greek": ["και"], "latvian": ["Bet", "Jošafats", "to", "nevēlējās"] },
+      { "hebrew": "אָבָ֖ה", "greek": [], "latvian": [] },
+      { "hebrew": "יְהוֹשָׁפָֽט׃", "greek": [], "latvian": [] }
     ],
-    "leftover_greek": ["καὶ", "καὶ", "ἐκοιμήθη", "πατέρων", "αὐτοῦ", "αὐτοῦ", "αὐτοῦ", "αὐτοῦ", "αὐτοῦ", "ἐτάφη", "παρὰ", "τοῖς", "πατράσιν", "ἐν", "πόλει", "Δαυιδ", "τοῦ", "πατρὸς", "ἐβασίλευσεν", "Ιωραμ", "ἀντ", "και", "και", "εκοιμήθη Ιωσαφάτ", "πατέρων αυτού", "ετάφη", "παρά", "τοις", "πατράσιν αυτού", "εν", "πόλει", "Δαυίδ", "του", "πατρός αυτού", "εβασίλευσεν", "Ιωράμ", "υιός αυτού", "αντ'", "αυτού"],
-    "leftover_latvian": ["Un", "gūlās", "pie", "pie", "saviem", "saviem", "tēviem", "tēviem", "un", "tas", "tika", "apglabāts", "sava", "ciltstēva", "Dāvida", "pilsētā", "viņa", "viņa", "Jorāms", "kļuva", "ķēniņš", "vietā"]
+    "leftover_greek": ["ἐκοιμήθη", "πατέρων", "αὐτοῦ", "αὐτοῦ", "αὐτοῦ", "αὐτοῦ", "πατράσιν", "πατρὸς", "και", "και", "ετάφη", "παρά", "τοις", "εν", "πόλει", "Δαυίδ", "του", "εβασίλευσεν", "Ιωράμ", "αντ'", "αυτού"],
+    "leftover_latvian": []
   },
   {
     "hebrew_words": [
-      { "hebrew": "וַיִּשְׁכַּ֤ב", "greek": ["καὶ", "ἐκοιμήθη"], "latvian": ["Un", "Jošafats", "gulējās"] },
+      { "hebrew": "וַיִּשְׁכַּ֤ב", "greek": ["καὶ", "ἐκοιμήθη"], "latvian": ["Un", "Jošafats"] },
       { "hebrew": "יְהֽוֹשָׁפָט֙", "greek": ["Ιωσαφατ"], "latvian": [] },
       { "hebrew": "עִם", "greek": ["μετὰ"], "latvian": ["pie", "saviem", "tēviem"] },
       { "hebrew": "אֲבֹתָ֔יו", "greek": ["τῶν", "πατέρων", "αὐτοῦ"], "latvian": [] },
@@ -1062,8 +1062,8 @@
       { "hebrew": "תַּחְתָּֽיו׃", "greek": ["ἀντ", "αὐτοῦ"], "latvian": ["viņa", "vietā"] },
       { "hebrew": "ס", "greek": [], "latvian": [] }
     ],
-    "leftover_greek": ["Οχοζιας", "Αχααβ", "ἐβασίλευσεν", "ἐπὶ", "Ισραηλ", "Ισραηλ", "ἐν", "ἐν", "Σαμαρείᾳ", "ἔτει", "ἑπτακαιδεκάτῳ", "βασιλεῖ", "Ιουδα", "ἔτη", "δύο"],
-    "leftover_latvian": ["Ahasja", "Ahaba", "Israēla", "Samarijā", "Jūdas", "ķēniņa", "Jošafata", "septiņpadsmitajā", "valdīšanas", "gadā", "valdīja", "pār", "Israēlu", "divus", "gadus", "gūlās"]
+    "leftover_greek": [],
+    "leftover_latvian": ["gūlās"]
   },
   {
     "hebrew_words": [
@@ -1085,8 +1085,8 @@
       { "hebrew": "יִשְׂרָאֵ֖ל", "greek": ["Ισραηλ"], "latvian": ["Israēlu"] },
       { "hebrew": "שְׁנָתָֽיִם׃", "greek": ["ἔτη", "δύο"], "latvian": ["divus", "gadus"] }
     ],
-    "leftover_greek": ["καὶ", "καὶ", "ἐποίησεν", "τὸ", "πονηρὸν", "ἐναντίον", "κυρίου", "ἐπορεύθη", "ὁδῷ", "ὁδῷ", "τοῦ", "πατρὸς", "αὐτοῦ", "αὐτοῦ", "Ιεζαβελ", "τῆς", "μητρὸς", "ταῖς", "ἁμαρτίαις", "οἴκου", "Ιεροβοαμ", "υἱοῦ", "Ναβατ", "ὃς", "ἐξήμαρτεν", "τὸν"],
-    "leftover_latvian": ["viņš", "darīja", "to", "kas", "kas", "ļauns", "Tā", "Kunga", "acīs", "un", "staigāja", "sava", "tēva", "ceļus", "ceļus", "ceļus", "arī", "arī", "savas", "mātes", "Nebata", "dēla", "Jerobeāma", "pavedināja", "grēkot"]
+    "leftover_greek": [],
+    "leftover_latvian": ["un"]
   },
   {
     "hebrew_words": [
@@ -1108,8 +1108,8 @@
       { "hebrew": "אֶת", "greek": ["τὸν"], "latvian": [] },
       { "hebrew": "יִשְׂרָאֵֽל׃", "greek": ["Ισραηλ"], "latvian": ["Israēlu", "grēkot"] }
     ],
-    "leftover_greek": ["ἐδούλευσεν", "τοῖς", "Βααλιμ", "προσεκύνησεν", "αὐτοῖς", "παρώργισεν", "κύριον", "θεὸν", "κατὰ", "πάντα", "τὰ", "γενόμενα", "ἔμπροσθεν"],
-    "leftover_latvian": ["viņš", "kalpoja", "Baalam", "pielūdza", "sadusmoja", "Kungu", "Israēla", "Dievu", "ar", "visu", "ko", "viņa", "tēvs", "bija", "darījis", "arī"]
+    "leftover_greek": [],
+    "leftover_latvian": ["arī"]
   },
   {
     "hebrew_words": [

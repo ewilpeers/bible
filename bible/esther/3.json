@@ -13,7 +13,7 @@
       { "hebrew": "הַמְּדָ֛תָא", "greek": ["Βουγαῖον"], "latvian": ["Hammedatas"] },
       { "hebrew": "הָאֲגָגִ֖י", "greek": [], "latvian": ["agagieti"] },
       { "hebrew": "וַֽיְנַשְּׂאֵ֑הוּ", "greek": ["καὶ", "ὕψωσεν", "αὐτόν"], "latvian": ["un", "visaugstākā", "amatā"] },
-      { "hebrew": "וַיָּ֙שֶׂם֙", "greek": ["καὶ", "ἐπρωτοβάθρει"], "latvian": ["un", "liku"] },
+      { "hebrew": "וַיָּ֙שֶׂם֙", "greek": ["καὶ", "ἐπρωτοβάθρει"], "latvian": ["un"] },
       { "hebrew": "אֶת", "greek": [], "latvian": [] },
       { "hebrew": "כִּסְא֔וֹ", "greek": [], "latvian": ["viņa", "sēdekli"] },
       { "hebrew": "מֵעַ֕ל", "greek": ["πάντων"], "latvian": ["augstāk"] },
@@ -22,7 +22,7 @@
       { "hebrew": "אֲשֶׁ֥ר", "greek": ["αὐτοῦ"], "latvian": ["savā"] },
       { "hebrew": "אִתּֽוֹ׃", "greek": [], "latvian": ["galmā"] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["δὲ"],
     "leftover_latvian": ["augstākā", "godā", "lika"]
   },
   {
@@ -56,7 +56,7 @@
       { "hebrew": "עַבְדֵ֥י", "greek": ["οἱ"], "latvian": ["ķēniņa", "kalpotāji"] },
       { "hebrew": "הַמֶּ֛לֶךְ", "greek": ["ἐν", "τῇ", "αὐλῇ"], "latvian": [] },
       { "hebrew": "אֲשֶׁר", "greek": [], "latvian": ["kas"] },
-      { "hebrew": "בְּשַׁ֥עַר", "greek": ["τοῦ", "βασιλέως"], "latvian": ["kas", "bija", "pie", "vārtiem"] },
+      { "hebrew": "בְּשַׁ֥עַר", "greek": ["τοῦ", "βασιλέως"], "latvian": ["bija", "pie", "vārtiem"] },
       { "hebrew": "הַמֶּ֖לֶךְ", "greek": [], "latvian": [] },
       { "hebrew": "לְמָרְדֳּכָ֑י", "greek": ["τῷ", "Μαρδοχαίῳ"], "latvian": ["jautāja", "Mordohajam"] },
       { "hebrew": "מַדּ֙וּעַ֙", "greek": ["Μαρδοχαῖε"], "latvian": ["Kāpēc"] },
@@ -99,7 +99,7 @@
   {
     "hebrew_words": [
       { "hebrew": "וַיַּ֣רְא", "greek": ["καὶ", "ἐπιγνοὺς"], "latvian": ["Un", "kad"] },
-      { "hebrew": "הָמָ֔ן", "greek": ["Αμαν"], "latvian": ["Hamanas"] },
+      { "hebrew": "הָמָ֔ן", "greek": ["Αμαν"], "latvian": [] },
       { "hebrew": "כִּי", "greek": ["ὅτι"], "latvian": ["ka"] },
       { "hebrew": "אֵ֣ין", "greek": ["οὐ"], "latvian": ["Mordohajs", "tiešām"] },
       { "hebrew": "מָרְדֳּכַ֔י", "greek": ["προσκυνεῖ"], "latvian": ["neliecas"] },
@@ -145,8 +145,8 @@
   },
   {
     "hebrew_words": [
-      { "hebrew": "בַּחֹ֤דֶשׁ", "greek": ["μηνὶ"], "latvian": ["Pirmajā", "mēnesī"] },
-      { "hebrew": "הָרִאשׁוֹן֙", "greek": ["πρώτῳ"], "latvian": [] },
+      { "hebrew": "בַּחֹ֤דֶשׁ", "greek": [], "latvian": ["Pirmajā", "mēnesī"] },
+      { "hebrew": "הָרִאשׁוֹן֙", "greek": [], "latvian": [] },
       { "hebrew": "הוּא", "greek": [], "latvian": ["kas", "ir"] },
       { "hebrew": "חֹ֣דֶשׁ", "greek": [], "latvian": ["nīsāna", "mēnesis"] },
       { "hebrew": "נִיסָ֔ן", "greek": [], "latvian": [] },
@@ -161,7 +161,7 @@
       { "hebrew": "הַגּוֹרָ֜ל", "greek": [], "latvian": ["meslus"] },
       { "hebrew": "לִפְנֵ֣י", "greek": [], "latvian": ["priekšā"] },
       { "hebrew": "הָמָ֗ן", "greek": [], "latvian": ["Hamana"] },
-      { "hebrew": "מִיּ֧וֹם", "greek": ["ἡμέραν"], "latvian": ["no", "dinas"] },
+      { "hebrew": "מִיּ֧וֹם", "greek": ["ἡμέραν"], "latvian": ["no"] },
       { "hebrew": "לְי֛וֹם", "greek": ["ἐξ", "ἡμέρας"], "latvian": ["dienā"] },
       { "hebrew": "וּמֵחֹ֛דֶשׁ", "greek": ["καὶ", "μῆνα"], "latvian": ["un", "viņi", "meta", "tos", "no", "mēneša"] },
       { "hebrew": "לְחֹ֥דֶשׁ", "greek": ["ἐκ", "μηνὸς"], "latvian": ["mēnesī"] },
@@ -172,7 +172,7 @@
       { "hebrew": "אֲדָֽר׃", "greek": ["ὅς", "ἐστιν", "Αδαρ"], "latvian": ["kas", "ir", "ādāra", "mēnesis"] },
       { "hebrew": "ס", "greek": [], "latvian": [] }
     ],
-    "leftover_greek": ["καὶ", "ἐποίησεν", "ψήφισμα", "ὥστε", "ἀπολέσαι", "ἐν", "μιᾷ", "ἡμέρᾳ", "τὸ", "γένος", "Μαρδοχαίου", "καὶ", "ἔπεσεν", "ὁ", "κλῆρος", "εἰς", "τὴν", "τεσσαρεσκαιδεκάτην", "τοῦ", "μηνός"],
+    "leftover_greek": ["καὶ", "ἐποίησεν", "ψήφισμα", "ὥστε", "ἀπολέσαι", "ἐν", "μιᾷ", "ἡμέρᾳ", "τὸ", "γένος", "Μαρδοχαίου", "καὶ", "ἔπεσεν", "ὁ", "κλῆρος", "εἰς", "τὴν", "τεσσαρεσκαιδεκάτην", "τοῦ", "μηνός", "καὶ"],
     "leftover_latvian": ["dienas"]
   },
   {
