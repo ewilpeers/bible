@@ -54,7 +54,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install jupyter nbconvert pandas openpyxl
+        run: pip install jupyter nbconvert pandas openpyxl tqdm
 
       - name: Build HTML
         run: jupyter nbconvert --to notebook --execute ci/5HTML_render_OT.ipynb --ExecutePreprocessor.timeout=600
