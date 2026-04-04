@@ -42,6 +42,7 @@ jobs:
           repository: grauziitisos/ot-west-len-data
           token: ${{ secrets.DATA_REPO_PAT }}
           path: data
+          lfs: true
           
       - name: Debug - check CSV headers biblehub_hb_en_direct
         run: |
