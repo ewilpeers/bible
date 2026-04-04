@@ -44,6 +44,10 @@ jobs:
           path: data
           lfs: true
           
+      - name: Debug - check index.html generator batch file present
+        run: |
+          ls -hall ci/u 
+          
       - name: Debug - check CSV headers biblehub_hb_en_direct
         run: |
           head -1 data/biblehub_hb_en_direct.csv  
