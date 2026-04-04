@@ -1,9 +1,9 @@
 # .github/workflows/build-and-deploy.yml
 #
-# Converts bible JSON → HTML and publishes to GitHub Pages.
+# Converts bible JSON → xlsx.
 # Triggers on push to main (when bible/ data or the build script change).
 
-name: Export Bible to excel & Deploy Pages
+name: Export Bible to excel
 
 on:
   repository_dispatch:
@@ -57,20 +57,5 @@ jobs:
         run: pip install jupyter nbconvert pandas openpyxl tqdm
 
       - name: Build XLSX
-        run: jupyter nbconvert --to notebook --execute ci/7excel_import_export.ipynb --ExecutePreprocessor.timeout=1337
+        run: jupyter nbconvert --to notebook --execute ci/7excel_import_export.ipynb --ExecutePreprocessor.timeout=111337
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: excel
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
