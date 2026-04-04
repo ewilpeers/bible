@@ -3,7 +3,7 @@
 # Converts bible JSON → HTML and publishes to GitHub Pages.
 # Triggers on push to main (when bible/ data or the build script change).
 
-name: Build Bible HTMLs & Deploy Pages
+name: Build Bible HTML, XLSX & Deploy Pages
 
 on:
   repository_dispatch:
@@ -73,6 +73,12 @@ jobs:
       #     cp -r strongs_p_g html/ 2>/dev/null || true
       - name: Build XLSX
         run: jupyter execute ci/7excel_import_export.ipynb --timeout=111337
+        
+      - name: Zip excel folder
+        run: cd excel && zip -qr ../excel/excel.zip .
+        
+      - name: Zip html folder
+        run: cd html && zip -qr ../html/bibele_e.zip .
         
       - name: Prepare deploy folder
         run: |
