@@ -42,6 +42,18 @@ jobs:
           repository: grauziitisos/ot-west-len-data
           token: ${{ secrets.DATA_REPO_PAT }}
           path: data
+      - name: Debug - list data contents
+        run: |
+          ls -la data/
+          ls data/*.csv || echo "no CSVs in data/"
+      - name: Debug - list data
+        run: |
+          ls -la ./
+          ls data/ || echo "no data/"
+      - name: Debug - list
+        run: |
+          ls -la ./*
+          ls ./* || echo "no data/"    
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
