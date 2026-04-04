@@ -43,9 +43,8 @@ jobs:
           token: ${{ secrets.DATA_REPO_PAT }}
           path: data
           
-      - name: Debug - check CSV headers
+      - name: Debug - check CSV headers biblehub_hb_en_direct
         run: |
-          head -1 data/RT65_words.csv
           head -1 data/biblehub_hb_en_direct.csv  
           
       - name: Set up Python
