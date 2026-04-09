@@ -14,7 +14,7 @@ on:
       - 'bible/**/*.json'
       - 'ci/5HTML_render_OT.ipynb'
       - 'ci/7excel_import_export.ipynb'
-      - '5HTML_render_OT.ipynb'
+      - '6HTML_render_OT.ipynb'
       - '7excel_import_export.ipynb'
   workflow_dispatch:  # manual trigger button in GitHub UI
 
