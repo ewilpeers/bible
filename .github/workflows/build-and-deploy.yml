@@ -9,7 +9,7 @@ on:
   repository_dispatch:
     types: [data-updated]
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - 'bible/**/*.json'
       - 'ci/5HTML_render_OT.ipynb'
