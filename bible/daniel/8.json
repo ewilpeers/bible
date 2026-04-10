@@ -31,9 +31,9 @@
       { "hebrew": "אֲשֶׁ֖ר", "greek": ["ἥ", "ἐστιν"], "latvian": ["kas", "atrodas"] },
       { "hebrew": "בְּעֵילָ֣ם", "greek": ["ἐν"], "latvian": ["Ēlāmas", "valstī"] },
       { "hebrew": "הַמְּדִינָ֑ה", "greek": ["χώρᾳ"], "latvian": [] },
-      { "hebrew": "וָאֶרְאֶה֙", "greek": ["καὶ", "εἶδον"], "latvian": ["un", "es", "redzēju"] },
-      { "hebrew": "בֶּֽחָז֔וֹן", "greek": ["ἐν", "ὁράματι"], "latvian": ["sevi", "šai", "parādībā"] },
-      { "hebrew": "וַאֲנִ֥י", "greek": ["ἤμην", "καὶ"], "latvian": ["ka", "es", "biju"] },
+      { "hebrew": "וָאֶרְאֶה֙", "greek": [], "latvian": ["un", "es", "redzēju"] },
+      { "hebrew": "בֶּֽחָז֔וֹן", "greek": [], "latvian": ["sevi", "šai", "parādībā"] },
+      { "hebrew": "וַאֲנִ֥י", "greek": [], "latvian": ["ka", "es", "biju"] },
       { "hebrew": "הָיִ֖יתִי", "greek": [], "latvian": [] },
       { "hebrew": "עַל", "greek": ["ἐπὶ"], "latvian": ["pie"] },
       { "hebrew": "אוּבַ֥ל", "greek": ["τοῦ", "Ουβαλ"], "latvian": ["Ulajas", "upes"] },
@@ -65,7 +65,7 @@
       { "hebrew": "עֹלָ֖ה", "greek": ["ἀνέβαινεν"], "latvian": [] },
       { "hebrew": "בָּאַחֲרֹנָֽה׃", "greek": ["ἐπ", "ἐσχάτων"], "latvian": [] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["καὶ"],
     "leftover_latvian": []
   },
   {
@@ -136,7 +136,7 @@
       { "hebrew": "בַּחֲמַ֥ת", "greek": ["ἐν", "ὁρμῇ"], "latvian": [] },
       { "hebrew": "כֹּחֽוֹ׃", "greek": ["τῆς", "ἰσχύος", "αὐτοῦ"], "latvian": ["ar", "visu", "savu", "spēku"] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["ἔχοντος"],
     "leftover_latvian": []
   },
   {
@@ -169,7 +169,7 @@
       { "hebrew": "לָאַ֖יִל", "greek": ["τὸν", "κριὸν"], "latvian": ["aunu"] },
       { "hebrew": "מִיָּדֽוֹ׃", "greek": ["ἐκ", "χειρὸς", "αὐτοῦ"], "latvian": ["no", "varas"] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["τοῦ", "πρὸς", "συνέτριψεν", "τὰ", "οὐκ"],
     "leftover_latvian": ["tā"]
   },
   {
@@ -241,12 +241,12 @@
       { "hebrew": "וּמִמֶּ֙נּוּ֙", "greek": ["καὶ", "δι", "αὐτὸν"], "latvian": ["tā", "ka", "tas", "pēdējam", "atņēma"] },
       { "hebrew": "הרים", "greek": ["ἐρράχθη"], "latvian": [] },
       { "hebrew": "הוּרַ֣ם", "greek": [], "latvian": [] },
-      { "hebrew": "הַתָּמִ֔יד", "greek": ["θυσία", "ἐρράχθη"], "latvian": ["dienišķo", "upuri"] },
+      { "hebrew": "הַתָּמִ֔יד", "greek": ["θυσία"], "latvian": ["dienišķo", "upuri"] },
       { "hebrew": "וְהֻשְׁלַ֖ךְ", "greek": ["καὶ", "κατευοδώθη"], "latvian": ["izpostīja"] },
-      { "hebrew": "מְכ֥וֹן", "greek": ["ὁ"], "latvian": ["un", "lika", "negodā", "viņa", "svētuma", "mitekli"] },
+      { "hebrew": "מְכ֥וֹן", "greek": [], "latvian": ["un", "lika", "negodā", "viņa", "svētuma", "mitekli"] },
       { "hebrew": "מִקְדָּשֽׁוֹ׃", "greek": ["καὶ", "τὸ", "ἅγιον"], "latvian": [] }
     ],
-    "leftover_greek": ["ῥύσηται", "τὴν", "αἰχμαλωσίαν"],
+    "leftover_greek": ["τὴν", "αἰχμαλωσίαν", "καὶ", "καὶ", "ἐγενήθη", "αὐτῷ", "ἐρημωθήσεται"],
     "leftover_latvian": []
   },
   {
@@ -258,11 +258,11 @@
       { "hebrew": "בְּפָ֑שַׁע", "greek": ["ἁμαρτία"], "latvian": ["apgrēcības", "dēļ"] },
       { "hebrew": "וְתַשְׁלֵ֤ךְ", "greek": ["καὶ", "ἐρρίφη"], "latvian": ["un", "rags", "nogāza"] },
       { "hebrew": "אֱמֶת֙", "greek": ["ἡ", "δικαιοσύνη"], "latvian": ["patiesību"] },
-      { "hebrew": "אַ֔רְצָה", "greek": ["ἡ", "δικαιοσύνη"], "latvian": ["pie", "zemes"] },
+      { "hebrew": "אַ֔רְצָה", "greek": [], "latvian": ["pie", "zemes"] },
       { "hebrew": "וְעָשְׂתָ֖ה", "greek": ["καὶ", "ἐποίησεν"], "latvian": ["un", "viss", "ko", "viņš", "darīja"] },
       { "hebrew": "וְהִצְלִֽיחָה׃", "greek": ["καὶ", "εὐοδώθη"], "latvian": ["tas", "tam", "izdevās", "labi"] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["χαμαὶ"],
     "leftover_latvian": []
   },
   {
@@ -284,10 +284,10 @@
       { "hebrew": "שֹׁמֵ֔ם", "greek": ["ἐρημώσεως"], "latvian": [] },
       { "hebrew": "תֵּ֛ת", "greek": ["ἡ", "δοθεῖσα"], "latvian": [] },
       { "hebrew": "וְקֹ֥דֶשׁ", "greek": ["καὶ", "τὸ", "ἅγιον"], "latvian": ["ka", "svētnīca"] },
-      { "hebrew": "וְצָבָ֖א", "greek": ["καὶ", "ἡ", "δύναμις"], "latvian": ["un", "debesu", "karapulks"] },
+      { "hebrew": "וְצָבָ֖א", "greek": ["ἡ", "δύναμις"], "latvian": ["un", "debesu", "karapulks"] },
       { "hebrew": "מִרְמָֽס׃", "greek": ["συμπατηθήσεται"], "latvian": ["tiek", "atdoti", "samīdīšanai"] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["ἡ", "στήσεται", "ἀρθεῖσα"],
     "leftover_latvian": []
   },
   {
@@ -303,7 +303,7 @@
       { "hebrew": "וְנִצְדַּ֖ק", "greek": ["καὶ", "καθαρισθήσεται"], "latvian": ["vakariem", "un", "rītiem", "tad", "svētnīca", "tiks", "atkal", "atzīta", "par", "taisnu"] },
       { "hebrew": "קֹֽדֶשׁ׃", "greek": ["τὸ", "ἅγιον"], "latvian": ["un", "atgūs", "atkal", "savas", "tiesības"] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["καὶ", "ἡμέραι"],
     "leftover_latvian": []
   },
   {
@@ -313,7 +313,7 @@
       { "hebrew": "אֲנִ֥י", "greek": ["ἐγὼ"], "latvian": [] },
       { "hebrew": "דָנִיֵּ֖אל", "greek": ["Δανιηλ"], "latvian": [] },
       { "hebrew": "אֶת", "greek": ["τὴν", "ὅρασιν"], "latvian": ["redzēju", "šo", "parādību"] },
-      { "hebrew": "הֶחָז֑וֹן", "greek": ["ὅρασιν"], "latvian": [] },
+      { "hebrew": "הֶחָז֑וֹן", "greek": [], "latvian": [] },
       { "hebrew": "וָאֲבַקְשָׁ֣ה", "greek": ["ἐζήτουν"], "latvian": ["un", "lūkoju", "to", "saprast"] },
       { "hebrew": "בִינָ֔ה", "greek": ["σύνεσιν"], "latvian": [] },
       { "hebrew": "וְהִנֵּ֛ה", "greek": ["καὶ", "ἰδοὺ"], "latvian": ["es", "ieraudzīju"] },
@@ -322,7 +322,7 @@
       { "hebrew": "כְּמַרְאֵה", "greek": ["ὡς", "ὅρασις"], "latvian": ["kuram", "bija", "vīra", "izskats"] },
       { "hebrew": "גָֽבֶר׃", "greek": ["ἀνδρός"], "latvian": [] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["καὶ"],
     "leftover_latvian": []
   },
   {
@@ -363,7 +363,7 @@
       { "hebrew": "קֵ֥ץ", "greek": ["πέρας"], "latvian": [] },
       { "hebrew": "הֶחָזֽוֹן׃", "greek": ["ἡ", "ὅρασις"], "latvian": [] }
     ],
-    "leftover_greek": ["καὶ", "ἔστη"],
+    "leftover_greek": ["καὶ", "ἔστη", "καιροῦ"],
     "leftover_latvian": []
   },
   {
@@ -380,7 +380,7 @@
       { "hebrew": "עַל", "greek": ["ἐπὶ"], "latvian": ["uz", "kājām"] },
       { "hebrew": "עָמְדִֽי׃", "greek": ["πόδας"], "latvian": ["vecajā", "vietā"] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["μου"],
     "leftover_latvian": ["uz", "sava", "vaiga"]
   },
   {
@@ -397,7 +397,7 @@
       { "hebrew": "לְמוֹעֵ֥ד", "greek": ["εἰς", "καιροῦ"], "latvian": ["šī", "parādība", "ir", "par", "Dieva", "paša", "nolikto", "pēdējo", "laiku"] },
       { "hebrew": "קֵֽץ׃", "greek": ["πέρας"], "latvian": [] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["ἡ", "ὅρασις"],
     "leftover_latvian": []
   },
   {
@@ -424,7 +424,7 @@
       { "hebrew": "הַגְּדוֹלָה֙", "greek": ["τὸ", "μέγα"], "latvian": [] },
       { "hebrew": "אֲשֶׁ֣ר", "greek": ["ὃ", "ἦν"], "latvian": ["uz", "viņa", "pieres"] },
       { "hebrew": "בֵּין", "greek": ["ἀνὰ", "μέσον"], "latvian": [] },
-      { "hebrew": "עֵינָ֔יו", "greek": ["τῶν", "ὀφθαλμῶν", "αὐτοῦ"], "latvian": [] },
+      { "hebrew": "עֵינָ֔יו", "greek": ["ὀφθαλμῶν", "αὐτοῦ"], "latvian": [] },
       { "hebrew": "ה֖וּא", "greek": ["αὐτός", "ἐστιν"], "latvian": ["ir", "pirmais", "ķēniņš"] },
       { "hebrew": "הַמֶּ֥לֶךְ", "greek": ["ὁ", "βασιλεὺς"], "latvian": [] },
       { "hebrew": "הָרִאשֽׁוֹן׃", "greek": ["ὁ", "πρῶτος"], "latvian": [] }
@@ -443,9 +443,9 @@
       { "hebrew": "מִגּ֥וֹי", "greek": ["ἐκ", "τοῦ", "ἔθνους", "αὐτοῦ"], "latvian": ["izveidosies", "no", "viņa", "tautas"] },
       { "hebrew": "יַעֲמֹ֖דְנָה", "greek": ["ἀναστήσονται"], "latvian": [] },
       { "hebrew": "וְלֹ֥א", "greek": ["καὶ", "οὐκ"], "latvian": ["bet", "ne", "ar", "tādu", "varu"] },
-      { "hebrew": "בְכֹחֽוֹ׃", "greek": ["ἐν", "τῇ", "ἰσχύι", "αὐτοῦ"], "latvian": ["un", "spēku", "kāds", "viņam", "bija"] }
+      { "hebrew": "בְכֹחֽוֹ׃", "greek": ["ἐν", "τῇ", "ἰσχύι"], "latvian": ["un", "spēku", "kāds", "viņam", "bija"] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["τέσσαρα", "κέρατα"],
     "leftover_latvian": []
   },
   {
@@ -502,7 +502,7 @@
       { "hebrew": "יָ֖ד", "greek": ["χειρὶ"], "latvian": ["bez", "cilvēku", "roku", "palīdzības"] },
       { "hebrew": "יִשָּׁבֵֽר׃", "greek": ["συντρίψει"], "latvian": [] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["ἐν"],
     "leftover_latvian": []
   },
   {
@@ -538,12 +538,12 @@
       { "hebrew": "הַמֶּ֑לֶךְ", "greek": ["τοῦ", "βασιλέως"], "latvian": ["ķēniņa", "uzdevumā"] },
       { "hebrew": "וָאֶשְׁתּוֹמֵ֥ם", "greek": ["καὶ", "ἐθαύμαζον"], "latvian": ["tomēr", "parādība", "mani", "ārkārtīgi", "uztrauca"] },
       { "hebrew": "עַל", "greek": ["τὴν", "ὅρασιν"], "latvian": [] },
-      { "hebrew": "הַמַּרְאֶ֖ה", "greek": ["ὅρασιν"], "latvian": [] },
+      { "hebrew": "הַמַּרְאֶ֖ה", "greek": [], "latvian": [] },
       { "hebrew": "וְאֵ֥ין", "greek": ["καὶ", "οὐκ", "ἦν"], "latvian": ["jo", "es", "taču", "nevarēju", "to", "pilnīgi", "izprast"] },
       { "hebrew": "מֵבִֽין׃", "greek": ["ὁ", "συνίων"], "latvian": [] },
       { "hebrew": "פ", "greek": [], "latvian": [] }
     ],
-    "leftover_greek": [],
+    "leftover_greek": ["καὶ"],
     "leftover_latvian": []
   }
 ]
