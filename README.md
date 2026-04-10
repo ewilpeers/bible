@@ -4,13 +4,13 @@
 * verse / fragment views just as on BLB
 * 
 # missing verses (greek empty):
-('esther', 4, 6)
-('esther', 9, 5)
-('esther', 9, 30)
-('jeremiah', 10, 10)
-('proverbs', 16, 3)
-('proverbs', 16, 6)
-('proverbs', 16, 9)
+* ('esther', 4, 6)
+* ('esther', 9, 5)
+* ('esther', 9, 30)
+* ('jeremiah', 10, 10)
+* ('proverbs', 16, 3)
+* ('proverbs', 16, 6)
+* ('proverbs', 16, 9)
 
 # known bugs (TOFIX):
 For audio bugs it is ok to open an issue with just the audio number (don't forget to prepend the h or g, as g0001.mp3 and h0001.mp3 are different)
