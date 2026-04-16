@@ -40,7 +40,7 @@ l65_to_hb_merge={}
 # mergverses is ho many first verser to merge, 
 # 1+2   -> 2 verses
 # 1,2,3 -> 3 verses
-def add_psalms_merging_verse_1_in_1965(chap, maxverse, mergverses=2):
+def add_psalms_merging_verse_n_in_1965(chap, maxverse, mergverses=2):
     mergekey = []
     for i in range (1, mergverses+1):
         mergekey.append(('psalms', chap, i))
@@ -53,88 +53,88 @@ def add_psalms_merging_verse_1_in_1965(chap, maxverse, mergverses=2):
         l65_to_hb[('xpsalms', chap, maxverse+1+i)]=('psalms', chap, maxverse-i)
 
         
-add_psalms_merging_verse_1_in_1965(3, 9)
-add_psalms_merging_verse_1_in_1965(4, 9)
-add_psalms_merging_verse_1_in_1965(5, 13)
-add_psalms_merging_verse_1_in_1965(6, 11)
-add_psalms_merging_verse_1_in_1965(7, 18)
-add_psalms_merging_verse_1_in_1965(8, 10)
-add_psalms_merging_verse_1_in_1965(9, 21)
+add_psalms_merging_verse_n_in_1965(3, 9)
+add_psalms_merging_verse_n_in_1965(4, 9)
+add_psalms_merging_verse_n_in_1965(5, 13)
+add_psalms_merging_verse_n_in_1965(6, 11)
+add_psalms_merging_verse_n_in_1965(7, 18)
+add_psalms_merging_verse_n_in_1965(8, 10)
+add_psalms_merging_verse_n_in_1965(9, 21)
 #how come, but this is not like in Latvian65 exception of rule...
 #add_psalms_merging_verse_1_in_1965(11, 8)
-add_psalms_merging_verse_1_in_1965(12, 9)
+add_psalms_merging_verse_n_in_1965(12, 9)
 
-add_psalms_merging_verse_1_in_1965(13, 5)
+add_psalms_merging_verse_n_in_1965(13, 5)
 # verse 5 is 5 and 6 split on B/Y$W(T/K
 #l65_to_hb_split = {('psalms', 13, 5): ['B/Y$W(T/K', ('psalms', 13, 5), ('psalms', 13, 6)]}
 #now fix the added overwrite....
 del l65_to_hb[('xpsalms', 13, 6)]
 hb_to_l65_splittable [('psalms', 13, 5)] = (('psalms', 13, 6), 'B/Y$W(T/K', 0)
 hb_to_l65_splittable [('psalms', 13, 6)] = (('psalms', 13, 6), 'B/Y$W(T/K', 1)
-add_psalms_merging_verse_1_in_1965(18, 51)
-add_psalms_merging_verse_1_in_1965(19, 15)
-add_psalms_merging_verse_1_in_1965(20, 10)
-add_psalms_merging_verse_1_in_1965(21, 14)
-add_psalms_merging_verse_1_in_1965(22, 32)
-add_psalms_merging_verse_1_in_1965(30, 13)
+add_psalms_merging_verse_n_in_1965(18, 51)
+add_psalms_merging_verse_n_in_1965(19, 15)
+add_psalms_merging_verse_n_in_1965(20, 10)
+add_psalms_merging_verse_n_in_1965(21, 14)
+add_psalms_merging_verse_n_in_1965(22, 32)
+add_psalms_merging_verse_n_in_1965(30, 13)
 #so far ok, therefore will leave the rest of psalms as is no check
-add_psalms_merging_verse_1_in_1965(31, 25)
-add_psalms_merging_verse_1_in_1965(34, 23)
-add_psalms_merging_verse_1_in_1965(36, 13)
-add_psalms_merging_verse_1_in_1965(38, 23)
-add_psalms_merging_verse_1_in_1965(39, 14)
-add_psalms_merging_verse_1_in_1965(40, 18)
-add_psalms_merging_verse_1_in_1965(41, 14)
-add_psalms_merging_verse_1_in_1965(42, 12)
-add_psalms_merging_verse_1_in_1965(44, 27)
-add_psalms_merging_verse_1_in_1965(45, 18)
-add_psalms_merging_verse_1_in_1965(46, 12)
-add_psalms_merging_verse_1_in_1965(47, 10)
-add_psalms_merging_verse_1_in_1965(48, 15)
-add_psalms_merging_verse_1_in_1965(49, 21)
+add_psalms_merging_verse_n_in_1965(31, 25)
+add_psalms_merging_verse_n_in_1965(34, 23)
+add_psalms_merging_verse_n_in_1965(36, 13)
+add_psalms_merging_verse_n_in_1965(38, 23)
+add_psalms_merging_verse_n_in_1965(39, 14)
+add_psalms_merging_verse_n_in_1965(40, 18)
+add_psalms_merging_verse_n_in_1965(41, 14)
+add_psalms_merging_verse_n_in_1965(42, 12)
+add_psalms_merging_verse_n_in_1965(44, 27)
+add_psalms_merging_verse_n_in_1965(45, 18)
+add_psalms_merging_verse_n_in_1965(46, 12)
+add_psalms_merging_verse_n_in_1965(47, 10)
+add_psalms_merging_verse_n_in_1965(48, 15)
+add_psalms_merging_verse_n_in_1965(49, 21)
 
 #also exception, 3 verses not 2 in catss
-add_psalms_merging_verse_1_in_1965(51, 21, 3)
+add_psalms_merging_verse_n_in_1965(51, 21, 3)
 #also exception, 3 verses not 2 in catss
-add_psalms_merging_verse_1_in_1965(52, 11, 3)
+add_psalms_merging_verse_n_in_1965(52, 11, 3)
 
-add_psalms_merging_verse_1_in_1965(53, 7)
+add_psalms_merging_verse_n_in_1965(53, 7)
 
 #also exception, 3 verses not 2 in catss
 #!!!!! was 8 wrong!!! take looka @mappings ALL
-add_psalms_merging_verse_1_in_1965(54, 9, 3)
+add_psalms_merging_verse_n_in_1965(54, 9, 3)
 
-add_psalms_merging_verse_1_in_1965(55, 24)
-add_psalms_merging_verse_1_in_1965(56, 14)
-add_psalms_merging_verse_1_in_1965(57, 12)
-add_psalms_merging_verse_1_in_1965(58, 12)
-add_psalms_merging_verse_1_in_1965(59, 18)
+add_psalms_merging_verse_n_in_1965(55, 24)
+add_psalms_merging_verse_n_in_1965(56, 14)
+add_psalms_merging_verse_n_in_1965(57, 12)
+add_psalms_merging_verse_n_in_1965(58, 12)
+add_psalms_merging_verse_n_in_1965(59, 18)
 #also exception, 3 verses not 2 in catss
-add_psalms_merging_verse_1_in_1965(60, 14, 3)
-add_psalms_merging_verse_1_in_1965(61, 9)
-add_psalms_merging_verse_1_in_1965(62, 13)
-add_psalms_merging_verse_1_in_1965(63, 12)
-add_psalms_merging_verse_1_in_1965(64, 11)
-add_psalms_merging_verse_1_in_1965(65, 14)
-add_psalms_merging_verse_1_in_1965(67, 8)
-add_psalms_merging_verse_1_in_1965(68, 36)
-add_psalms_merging_verse_1_in_1965(69, 37)
-add_psalms_merging_verse_1_in_1965(70, 6)
-add_psalms_merging_verse_1_in_1965(75, 11)
-add_psalms_merging_verse_1_in_1965(76, 13)
-add_psalms_merging_verse_1_in_1965(77, 21)
-add_psalms_merging_verse_1_in_1965(80, 20)
-add_psalms_merging_verse_1_in_1965(81, 17)
-add_psalms_merging_verse_1_in_1965(83, 19)
-add_psalms_merging_verse_1_in_1965(84, 13)
-add_psalms_merging_verse_1_in_1965(85, 14)
-add_psalms_merging_verse_1_in_1965(88, 19)
-add_psalms_merging_verse_1_in_1965(89, 53)
-add_psalms_merging_verse_1_in_1965(92, 16)
-add_psalms_merging_verse_1_in_1965(102, 29)
-add_psalms_merging_verse_1_in_1965(108, 14)
-add_psalms_merging_verse_1_in_1965(140, 14)
-add_psalms_merging_verse_1_in_1965(142, 8)
+add_psalms_merging_verse_n_in_1965(60, 14, 3)
+add_psalms_merging_verse_n_in_1965(61, 9)
+add_psalms_merging_verse_n_in_1965(62, 13)
+add_psalms_merging_verse_n_in_1965(63, 12)
+add_psalms_merging_verse_n_in_1965(64, 11)
+add_psalms_merging_verse_n_in_1965(65, 14)
+add_psalms_merging_verse_n_in_1965(67, 8)
+add_psalms_merging_verse_n_in_1965(68, 36)
+add_psalms_merging_verse_n_in_1965(69, 37)
+add_psalms_merging_verse_n_in_1965(70, 6)
+add_psalms_merging_verse_n_in_1965(75, 11)
+add_psalms_merging_verse_n_in_1965(76, 13)
+add_psalms_merging_verse_n_in_1965(77, 21)
+add_psalms_merging_verse_n_in_1965(80, 20)
+add_psalms_merging_verse_n_in_1965(81, 17)
+add_psalms_merging_verse_n_in_1965(83, 19)
+add_psalms_merging_verse_n_in_1965(84, 13)
+add_psalms_merging_verse_n_in_1965(85, 14)
+add_psalms_merging_verse_n_in_1965(88, 19)
+add_psalms_merging_verse_n_in_1965(89, 53)
+add_psalms_merging_verse_n_in_1965(92, 16)
+add_psalms_merging_verse_n_in_1965(102, 29)
+add_psalms_merging_verse_n_in_1965(108, 14)
+add_psalms_merging_verse_n_in_1965(140, 14)
+add_psalms_merging_verse_n_in_1965(142, 8)
 
 # ebreju vietturis : lv vietturis
 hb_to_l65 = {v: k for k, v in l65_to_hb.items() if v[0]!= '!'}
@@ -283,7 +283,7 @@ HEBREW_PUNCT = {
 
 def transliterate_catss_hebrew(s):
     """Convert one CATSS Michigan-Claremont token to Unicode Hebrew string."""
-    if not s or s.strip() in ('---', '--+', '^', '~', '^^^', '~~~'):
+    if not s or s.strip() in ('---', '--+', '^', '~', '^^^', '~~~', '^?'):
         return s or ''
     # strip leading * (ketiv/qere marker) and morpheme separator /
     word = s.lstrip('*')
@@ -339,7 +339,7 @@ def catss_token_to_heb(token):
 # ─────────────────────────────────────────────────────────────────────────────
 
 _STRIP_TOKENS = {
-    '^', '^^^', '---', '--+', '?', '??', "''", "'", '~~~', '~',
+    '^', '^^^', '---', '--+', '?', '??', "''", "'", '~~~', '~', '^?'
 }
 
 _LONE_FINAL_LETTERS = {'K', 'M', 'N', 'P', 'C', 'S'}
@@ -573,6 +573,7 @@ summary .counts{color:#888;font-size:.85em}
 .w-ok{background:#e8f5e9}
 .w-sofit{background:#fff3cd;border:1px solid #f0c040;font-weight:bold}
 .w-diff{background:#fde8e4}
+.w-diff-count{background:#BDED49}
 .w-catss-ok{background:#e3f0ff}
 .w-catss-merged{background:#fff3cd;border:1px solid #f0c040}
 
@@ -609,15 +610,15 @@ def strip_hebrew_for_match(s):
             out.append(FINAL_MAP.get(c, c))
     return ''.join(out).replace('/', '')
 
-def _word_chips(words, sofit_highlight=False, chip_cls_default='w-ok'):
+def _word_chips(words, sofit_highlight=False, chip_cls_default='w-ok', jddit_classes=[]):
     """Render a list of Hebrew/CATSS words as coloured chips."""
     chips = []
-    for w in words:
+    for w, clss in zip(words, jddit_classes):
         if sofit_highlight and _is_lone_sofit_heb(w):
-            cls = 'w-sofit'
+            clsa = 'w-sofit'
         else:
-            cls = chip_cls_default
-        chips.append(f'<span class="word {cls}">{w}</span>')
+            clsa = chip_cls_default
+        chips.append(f'<span class="word {clsa} {clss}">{w}</span>')
     return ''.join(chips)
 
 
@@ -631,21 +632,39 @@ def _catss_chips(tokens, heb_display, addit_clases):
     return ''.join(chips)
 
 
-
-def _diff_chips( json_hebrew, catss_tokens, catss_heb, sofit_highlight, catss_cls_default, json_cls_default):
+from collections import Counter
+def _diff_chips( json_hebrew, catss_tokens, catss_heb, sofit_highlight, ok_cls):
     
     #naive diff..
     catss_heb_stripped = [strip_hebrew_for_match(h) for h in catss_heb]
     json_hebrew_stripped = [strip_hebrew_for_match(h) for h in json_hebrew]
     diff_catss_from_json = set(catss_heb_stripped) - set(json_hebrew_stripped)
+    count_json = Counter(json_hebrew_stripped)
+    count_catss = Counter(catss_heb_stripped)
     addit_clases = []
     for w in catss_heb_stripped:
         if w in diff_catss_from_json:
             addit_clases.append('w-diff')
-        else:         
-            addit_clases.append(json_cls_default)
+        else:
+            if count_json[w] > 0 :         
+                addit_clases.append(ok_cls)
+                count_json[w] -= 1
+            else:
+                addit_clases.append('w-diff-count')
+    diff_json_from_catss = set(json_hebrew_stripped) - set(catss_heb_stripped)
+    jddit_classes=[]
+    for w in json_hebrew_stripped:
+        if w in diff_json_from_catss:
+            jddit_classes.append('w-diff')
+        else:
+            if count_catss[w] > 0 :         
+                jddit_classes.append(ok_cls)
+                count_catss[w] -= 1
+            else:
+                jddit_classes.append('w-diff-count')
     catss_chips = _catss_chips(catss_tokens, catss_heb, addit_clases)
-    json_chips = _word_chips(json_hebrew, sofit_highlight=sofit_highlight, chip_cls_default=json_cls_default)
+    json_chips = _word_chips(json_hebrew, sofit_highlight=sofit_highlight, chip_cls_default=ok_cls,
+    jddit_classes=jddit_classes)
     return catss_chips, json_chips
 
 
@@ -705,8 +724,7 @@ def _book_html(book, rows, par_stem):
             catss_chips, json_chips = _diff_chips(
                 r['json_hebrew'], r['catss_tokens'], r['catss_heb'], 
                 sofit_highlight=(status == 'orange'),
-                catss_cls_default='w-catts-ok' if status == 'green' else 'w-catss-merged',
-                json_cls_default='w-ok')
+                ok_cls='w-ok')
 
             parts.append(
                 f'<details class="{status}"{open_attr}>\n'
