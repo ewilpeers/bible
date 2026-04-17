@@ -29,23 +29,24 @@ For audio bugs it is ok to open an issue with just the audio number (don't forge
 # known discrepancies (WONTFIX):
 * Nehemiah 7:68 has only samek in Hebrew (in MT it does not have a verse there at all, but Ezra 2:66 has)
 ## gluck
-⚠️ ('1_chronicles', 3, 24) not in 1694 GLUCK!
-⚠️ ('1_chronicles', 4, 43) not in 1694 GLUCK!
-⚠️ ('ecclesiastes', 10, 11) not in 1694 GLUCK!
-⚠️ ('ezekiel', 7, 20) not in 1694 GLUCK!
-⚠️ ('ezekiel', 19, 14) not in 1694 GLUCK!
-⚠️ ('isaiah', 18, 2) not in 1694 GLUCK!
-⚠️ ('isaiah', 62, 7) not in 1694 GLUCK!
-⚠️ ('jeremiah', 2, 25) not in 1694 GLUCK!
-⚠️ ('leviticus', 15, 33) not in 1694 GLUCK!
-⚠️ ('numbers', 6, 27) not in 1694 GLUCK!
-⚠️ ('proverbs', 16, 26) not in 1694 GLUCK!
-⚠️ ('proverbs', 20, 30) not in 1694 GLUCK!
-⚠️ ('proverbs', 25, 14) not in 1694 GLUCK!
-⚠️ ('psalms', 18, 4) not in 1694 GLUCK!
-⚠️ ('psalms', 81, 7) not in 1694 GLUCK!
-⚠️ ('psalms', 90, 5) not in 1694 GLUCK!
-⚠️ ('songs', 2, 5) not in 1694 GLUCK!
+* ⚠️ ('1_chronicles', 3, 24) not in 1694 GLUCK!
+* ⚠️ ('1_chronicles', 4, 43) not in 1694 GLUCK!
+* ⚠️ ('ecclesiastes', 10, 11) not in 1694 GLUCK!
+* ⚠️ ('ezekiel', 7, 20) not in 1694 GLUCK!
+* ⚠️ ('ezekiel', 19, 14) not in 1694 GLUCK!
+* ⚠️ ('isaiah', 18, 2) not in 1694 GLUCK!
+* ⚠️ ('isaiah', 62, 7) not in 1694 GLUCK!
+* ⚠️ ('jeremiah', 2, 25) not in 1694 GLUCK!
+* ⚠️ ('leviticus', 15, 33) not in 1694 GLUCK!
+* ⚠️ ('numbers', 6, 27) not in 1694 GLUCK!
+* ⚠️ ('proverbs', 16, 26) not in 1694 GLUCK!
+* ⚠️ ('proverbs', 20, 30) not in 1694 GLUCK!
+* ⚠️ ('proverbs', 25, 14) not in 1694 GLUCK!
+* ⚠️ ('psalms', 18, 4) not in 1694 GLUCK!
+* ⚠️ ('psalms', 81, 7) not in 1694 GLUCK!
+* ⚠️ ('psalms', 90, 5) not in 1694 GLUCK!
+* ⚠️ ('songs', 2, 5) not in 1694 GLUCK!
+
 --
 
 Let me citate the matthewbarron.org Hbrw-> LXX mapping
