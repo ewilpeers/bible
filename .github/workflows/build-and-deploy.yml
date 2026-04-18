@@ -44,7 +44,7 @@ jobs:
           path: data
           lfs: true
       
-      - name: Debug: - check fonts folder present
+      - name: Debug - check fonts folder present
         run: |
             ls bible/fonts
       - name: Debug - check index.html generator batch file present
