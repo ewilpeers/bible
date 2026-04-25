@@ -107,7 +107,197 @@ const Slide25_SearchSolution = () => (
   </Slide>
 );
 
-const Slide26_KnownIssues = () => (
+// Shared bits used by the two real-result slides (Isaiah 2:4, Ezekiel 3:26).
+// Both slides illustrate the same Colab query — 'māc', kopīgie (LEN ∩ LEN) — but
+// pair them deliberately: Isaiah catches a *family* of inflections (pārmāca,
+// mācīsies, nemācīsies) where the Greek is ἐλέγξει; Ezekiel catches the direct
+// match where the Greek is ἐλέγχοντα.
+const SearchHighlight = ({ children }) => (
+  <span style={{ background: COLORS.highlight, padding: '0 3px', borderRadius: 2 }}>{children}</span>
+);
+
+const SearchLine = ({ flag, label, font, color, dir, fontSize = 22, children, lineHeight = 1.5 }) => (
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 4, minHeight: 0 }}>
+    <div style={{ fontFamily: FONTS.sans, fontSize: 14, color: COLORS.inkMute, letterSpacing: '0.06em' }}>
+      <span style={{ marginRight: 6 }}>{flag}</span>{label}
+    </div>
+    <div
+      style={{
+        fontFamily: font,
+        fontSize,
+        color: color || COLORS.ink,
+        lineHeight,
+        direction: dir || 'ltr',
+        background: '#FFF',
+        border: `1px solid ${COLORS.ruleSoft}`,
+        borderRadius: 4,
+        padding: '10px 14px',
+      }}
+    >
+      {children}
+    </div>
+  </div>
+);
+
+// Parameterized slide. `n` is the verse-shown index (1 or 2 of 35). `note` is
+// the one-line linguistic annotation rendered below the result.
+const SearchResultSlide = ({ eyebrow, title, n, verseRef, badge, hebrew, lv1694, greekLxx, greekAbp, lv1965, lv2024, note }) => (
+  <Slide>
+    <Eyebrow>{eyebrow}</Eyebrow>
+    <Title style={{ fontSize: 48 }}>{title}</Title>
+
+    {/* Query bar — mirrors the Colab page header */}
+    <div style={{ marginTop: 18, display: 'flex', alignItems: 'center', gap: 14, padding: '12px 18px', background: COLORS.bgAlt, border: `1px solid ${COLORS.ruleSoft}`, borderRadius: 6 }}>
+      <span style={{ fontFamily: FONTS.sans, fontSize: 13, letterSpacing: '0.12em', textTransform: 'uppercase', color: COLORS.inkMute }}>Query</span>
+      <span style={{ fontFamily: FONTS.mono, fontSize: 18, color: COLORS.ink }}>'māc'</span>
+      <span style={{ fontFamily: FONTS.sans, fontSize: 14, color: COLORS.inkMute }}>·</span>
+      <span style={{ fontFamily: FONTS.serif, fontStyle: 'italic', fontSize: 18, color: COLORS.inkSoft }}>kopīgie (LEN ∩ LEN)</span>
+      <span style={{ flex: 1 }} />
+      <span style={{ fontFamily: FONTS.mono, fontSize: 14, color: COLORS.accent, letterSpacing: '0.1em', textTransform: 'uppercase' }}>35 verses returned · showing {n}</span>
+    </div>
+
+    {/* Verse card */}
+    <div style={{ flex: 1, marginTop: 16, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+      <div
+        style={{
+          background: '#FFF',
+          border: `1px solid ${COLORS.rule}`,
+          borderLeft: `5px solid ${COLORS.greek}`,
+          borderRadius: 6,
+          padding: '18px 24px',
+          boxShadow: '0 12px 30px rgba(31,26,20,0.08)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 12,
+          minHeight: 0,
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <span
+            style={{
+              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+              width: 28, height: 28, borderRadius: '50%',
+              background: '#E74C3C', color: '#FFF',
+              fontFamily: FONTS.sans, fontSize: 14, fontWeight: 700,
+            }}
+          >{badge}</span>
+          <span style={{ fontFamily: FONTS.sans, fontWeight: 700, fontSize: 17, color: COLORS.ink, background: COLORS.bgAlt, padding: '6px 14px', borderRadius: 999 }}>
+            {verseRef}
+          </span>
+        </div>
+
+        {/* Row 1: Hebrew + Latvian 1694 (Fraktur) */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+          <SearchLine flag="🇮🇱" label="Hebrew" font={FONTS.hebrew} color={COLORS.hebrew} dir="rtl" fontSize={22}>
+            {hebrew}
+          </SearchLine>
+          <SearchLine flag="🇱🇻" label="Latvian (1694)" font={FONTS.fraktur} color={COLORS.fraktur} fontSize={20}>
+            {lv1694}
+          </SearchLine>
+        </div>
+
+        {/* Row 2: Greek LXX + ABP, and Latvian 1965 with always-open 2024 popup */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, minHeight: 0 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <SearchLine flag="🇬🇷" label="Greek LXX" font={FONTS.greek} color={COLORS.greek} fontSize={18}>
+              {greekLxx}
+            </SearchLine>
+            <SearchLine flag="🇬🇷" label="Greek ABP" font={FONTS.greek} color={COLORS.greek} fontSize={18}>
+              {greekAbp}
+            </SearchLine>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8, minHeight: 0 }}>
+            <SearchLine flag="🇱🇻" label="Latvian (1965)" font={FONTS.serif} color={COLORS.latvian} fontSize={18}>
+              {lv1965}
+            </SearchLine>
+            <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+              <span
+                style={{
+                  flexShrink: 0,
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                  width: 22, height: 22, borderRadius: '50%',
+                  background: '#2C3E50', color: '#FFF',
+                  fontFamily: FONTS.sans, fontSize: 13, fontWeight: 700,
+                  marginTop: 4,
+                }}
+              >ⓘ</span>
+              <div
+                style={{
+                  flex: 1,
+                  padding: '10px 14px',
+                  background: '#EAF4FB',
+                  border: '1px solid #AED6F1',
+                  borderRadius: 6,
+                }}
+              >
+                <div style={{ fontFamily: FONTS.sans, fontSize: 13, fontWeight: 700, color: '#2471A3', marginBottom: 3, letterSpacing: '0.04em' }}>
+                  🇱🇻 Latvian (2024)
+                </div>
+                <div style={{ fontFamily: FONTS.serif, fontSize: 17, color: '#2C3E50', lineHeight: 1.45 }}>
+                  {lv2024}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Footnote: highlight legend + the slide-specific linguistic annotation */}
+    <div style={{ marginTop: 14, display: 'flex', gap: 22, alignItems: 'baseline', fontFamily: FONTS.sans, fontSize: 14, color: COLORS.inkMute }}>
+      <span><SearchHighlight>highlight</SearchHighlight> &nbsp;= where the regex matched in each text</span>
+      <span>·</span>
+      <span style={{ fontStyle: 'italic', color: COLORS.inkSoft }}>{note}</span>
+    </div>
+
+    <SlideFooter section="05 · Search" />
+  </Slide>
+);
+
+// Verse 1 of 35 — Isaiah 2:4 ("swords into plowshares").
+// The match catches *related inflections* across all four texts: Latvian 1694
+// has TWO hits (pārmācīs and mācīsies), Latvian 1965/2024 have nemācīsies.
+// Greek here is ἐλέγξει ("will rebuke") — a future inflection of the verb
+// that Ezekiel 3:26 uses as a participle (ἐλέγχοντα). One regex, two senses.
+const Slide26_SearchExample_Isaiah = () => (
+  <SearchResultSlide
+    eyebrow="Track 05 · Search · A real result (1 of 35)"
+    title="One needle catches a family of inflections."
+    n={1}
+    badge={4}
+    verseRef="Isaiah 2:4"
+    hebrew={<>וְשָׁפַט֙ בֵּ֣ין הַגּוֹיִ֔ם וְהוֹ<SearchHighlight>כִ֖יח</SearchHighlight>ַ לְעַמִּ֣ים רַבִּ֑ים וְכִתְּת֨וּ חַרְבוֹתָ֜ם לְאִתִּ֗ים וַחֲנִיתֽוֹתֵיהֶם֙ לְמַזְמֵר֔וֹת לֹא יִשָּׂ֨א ג֤וֹי אֶל גּוֹי֙ חֶ֔רֶב וְלֹא יִלְמְד֥וּ ע֖וֹד מִלְחָמָֽה׃ פ</>}
+    lv1694={<>Un wiꞥſch teeẜahs ſtarp teem Pagaꞥeem un pahr<SearchHighlight>mahz</SearchHighlight>ihs daudſ Łaudis un tee ẜakals ẜawus Sohbiꞥus par Lemmeẜcheem un ẜawus Ꞩchꞣehpus par Zirpeem Jo Tauta prett Tautu nekahdu Sohbinu pazels un ne <SearchHighlight>mahz</SearchHighlight>iẜees wairs Kaŗŗu</>}
+    greekLxx={<>καὶ κρινεῖ ἀνὰ μέσον τῶν ἐθνῶν καὶ ἐ<SearchHighlight>λέγ</SearchHighlight>ξει λαὸν πολύν καὶ συγκόψουσιν τὰς μαχαίρας αὐτῶν εἰς ἄροτρα καὶ τὰς ζιβύνας αὐτῶν εἰς δρέπανα καὶ οὐ λήμψεται ἔτι ἔθνος ἐπ ἔθνος μάχαιραν καὶ οὐ μὴ μάθωσιν ἔτι πολεμεῖν</>}
+    greekAbp={<>και κρινεί αναμέσον των εθνών και εξε<SearchHighlight>λέγ</SearchHighlight>ξει λαόν πολύν και συγκόψουσι τας μαχαίρας αυτών εις άροτρα και τας ζιβύνας αυτών εις δρέπανα και ου λήψεται έθνος επ' έθνος μάχαιραν και ου μη μάθωσιν έτι πολεμείν</>}
+    lv1965={<>Tad Viņš spriedīs tiesu tautu starpā un tiesās daudzas tautas Viņi tad pārkals savus zobenus par lemešiem un savus šķēpus par vīnadārza dārznieku nažiem Tauta pret tautu nepacels vairs zobena un ne<SearchHighlight>māc</SearchHighlight>īsies vairs karot</>}
+    lv2024={<>Viņš tiesās ļaudis spriedīs par daudzām tautām tad tie pārkals savus zobenus arklos un savus šķēpus ecēšās tauta pret tautu vairs zobenu necels un karot vairs ne<SearchHighlight>māc</SearchHighlight>īsies</>}
+    note={<>Note — Greek here is <b>ἐλέγξει</b> (future "will rebuke"). Latvian 1694 hits <i>twice</i> — <b>pārmācīs</b> and <b>mācīsies</b> — both share the regex root <Code style={{ fontSize: '0.85em' }}>māc</Code>.</>}
+  />
+);
+
+// Verse 2 of 35 — Ezekiel 3:26. Different sense, same regex.
+// Latvian "pamācītāju" maps directly to Greek participle ἐλέγχοντα ("rebuker").
+// Together with Isaiah 2:4 these illustrate how a single regex picks up
+// both the future-tense and participial uses of the same Greek verb family.
+const Slide27_SearchExample_Ezekiel = () => (
+  <SearchResultSlide
+    eyebrow="Track 05 · Search · A real result (2 of 35)"
+    title="Same needle, the direct semantic match."
+    n={2}
+    badge={26}
+    verseRef="Ezekiel 3:26"
+    hebrew={<>וּלְשֽׁוֹנְךָ֙ אַדְבִּ֣יק אֶל חִכֶּ֔ךָ וְנֶֽאֱלַ֔מְתָּ וְלֹא תִֽהְיֶ֥ה לָהֶ֖ם לְאִ֣ישׁ מוֹ<SearchHighlight>כִ֑יח</SearchHighlight>ַ כִּ֛י בֵּ֥ית מְרִ֖י הֵֽמָּה׃</>}
+    lv1694={<>Un es likẜchu tawu Mehli pee tawa Schohda peelipt ka tew buhs mehmam palikt un teem wairs par Pahr<SearchHighlight>maz</SearchHighlight>itaju ne buht jo tee irr weens pahrgalwigs Nams</>}
+    greekLxx={<>καὶ τὴν γλῶσσάν σου συνδήσω καὶ ἀποκωφωθήσῃ καὶ οὐκ ἔσῃ αὐτοῖς εἰς ἄνδρα ἐ<SearchHighlight>λέγ</SearchHighlight>χοντα διότι οἶκος παραπικραίνων ἐστίν</>}
+    greekAbp={<>και την γλώσσάν σου συνδήσω τω λάρυγγί σου και αποκωφωθήση και ουκ έση αυτοίς εις άνδρα ε<SearchHighlight>λέγ</SearchHighlight>χοντα διότι οίκος παραπικραίνων εστί</>}
+    lv1965={<>Es likšu tavai mēlei pielipt pie tava žokļa ka tu paliec mēms un nebūsi tiem vairs par pa<SearchHighlight>māc</SearchHighlight>ītāju jo tie ir pretestības pilna cilts</>}
+    lv2024={<>Un tavu mēli es pielipināšu aukslējām ka tu būsi mēms Tu nebūsi ar tiem lai katrs lemj pats jo tie ir dumpīga saime</>}
+    note={<>Note — Greek here is <b>ἐλέγχοντα</b> (participle "rebuker"). Latvian <b>pamācītāju</b> is the noun form — a direct semantic match. Same regex; different inflection from Isaiah's <b>ἐλέγξει</b>.</>}
+  />
+);
+
+const Slide28_KnownIssues = () => (
   <Slide>
     <Eyebrow>Honesty</Eyebrow>
     <Title>Known issues are documented openly.</Title>
@@ -134,7 +324,7 @@ const Slide26_KnownIssues = () => (
   </Slide>
 );
 
-const Slide27_CTA = () => (
+const Slide29_CTA = () => (
   <Slide bg={COLORS.bgDark} color="#E8DDC4" padded={false}>
     <div style={{ position: 'absolute', inset: 0, padding: `${SPACING.paddingTop}px ${SPACING.paddingX}px ${SPACING.paddingBottom}px`, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80 }}>
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 30, borderRight: '1px solid #3D3830', paddingRight: 80 }}>
@@ -172,7 +362,7 @@ const Slide27_CTA = () => (
   </Slide>
 );
 
-const Slide28_End = () => (
+const Slide30_End = () => (
   <Slide bg={COLORS.bg} padded={false}>
     <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 36, padding: SPACING.paddingX }}>
       <div style={{ fontFamily: FONTS.mono, fontSize: 22, color: COLORS.inkMute, letterSpacing: '0.3em', textTransform: 'uppercase' }}>
@@ -185,4 +375,4 @@ const Slide28_End = () => (
   </Slide>
 );
 
-Object.assign(window, { Slide24_SearchProblem, Slide25_SearchSolution, Slide26_KnownIssues, Slide27_CTA, Slide28_End });
+Object.assign(window, { Slide24_SearchProblem, Slide25_SearchSolution, Slide26_SearchExample_Isaiah, Slide27_SearchExample_Ezekiel, Slide28_KnownIssues, Slide29_CTA, Slide30_End });

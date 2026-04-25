@@ -94,9 +94,11 @@ const SLIDES = [
   ['s23', 'Slide23_CCATS_Status'],
   ['s24', 'Slide24_SearchProblem'],
   ['s25', 'Slide25_SearchSolution'],
-  ['s26', 'Slide26_KnownIssues'],
-  ['s27', 'Slide27_CTA'],
-  ['s28', 'Slide28_End'],
+  ['s26', 'Slide26_SearchExample_Isaiah'],
+  ['s27', 'Slide27_SearchExample_Ezekiel'],
+  ['s28', 'Slide28_KnownIssues'],
+  ['s29', 'Slide29_CTA'],
+  ['s30', 'Slide30_End'],
 ];
 
 const SLIDE_LABELS = [
@@ -105,7 +107,7 @@ const SLIDE_LABELS = [
   '10 Prerequisites','11 Step 1 — Clone','12 Step 2 — Render Notebook','13 Step 3 — Open Browser',
   '14 Data Flow','15 Contribute Header','16 Four Tracks','17 Alignment — Why','18 Alignment — Workflow',
   '19 Alignment — Excel','20 OCR Track','21 Page-cut Tool','22 CCATS — What','23 CCATS — Status',
-  '24 Search — Problem','25 Search — Solution','26 Known Issues','27 Try / Contribute','28 Q&A',
+  '24 Search — Problem','25 Search — Solution','26 Search — Isaiah 2:4','27 Search — Ezekiel 3:26','28 Known Issues','29 Try / Contribute','30 Q&A',
 ];
 
 const sections = [];
