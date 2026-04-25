@@ -5,7 +5,7 @@ const Slide20_OCR = () => (
     <Eyebrow>Track 02 · OCR <span style={{ color: COLORS.accent, marginLeft: 12 }}>· in progress</span></Eyebrow>
     <Title>The 1694 Glück text comes from OCR'd Fraktur scans.</Title>
     <Subtitle style={{ marginTop: 20 }}>
-      Repo: <Code>github.com/ewilpeers/lv_fraktur_ocr</Code> — actively being worked on.
+      Repo: <Code><a href="https://github.com/ewilpeers/lv_fraktur_ocr" target="_blank" style={{ color: '#5A5246' }}>github.com/ewilpeers/lv_fraktur_ocr</a></Code> — actively being worked on.
     </Subtitle>
     <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, marginTop: 56, minHeight: 0 }}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>

@@ -52,7 +52,7 @@ const Slide25_SearchSolution = () => (
     <Eyebrow>Track 05 · Search · The solution</Eyebrow>
     <Title>A Colab notebook gives you regex + multi-language needles.</Title>
     <Subtitle style={{ marginTop: 18 }}>
-      <Code>github.com/ewilpeers/bible/tree/master/xG_Collab</Code> — full Python, full regex, all four texts in one query.
+      <Code><a href="https://github.com/ewilpeers/bible/tree/master/xG_Collab" target="_blank" style={{ color: '#5A5246' }}>github.com/ewilpeers/bible/tree/master/xG_Collab</a></Code> — full Python, full regex, all four texts in one query.
     </Subtitle>
     <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 60, marginTop: 50, minHeight: 0 }}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
@@ -336,8 +336,9 @@ const Slide29_CTA = () => (
           Open any chapter, click any word, hear it spoken.
         </Body>
         <div style={{ marginTop: 16, display: 'flex', flexDirection: 'column', gap: 14 }}>
-          <div style={{ fontFamily: FONTS.mono, fontSize: 32, color: COLORS.accent }}>t.noit.pro/e/</div>
-          <div style={{ fontFamily: FONTS.mono, fontSize: 32, color: COLORS.accent }}>t.noit.pro/g/</div>
+          <div style={{ fontFamily: FONTS.mono, fontSize: 32, color: COLORS.accent }}><a style={{ fontFamily: FONTS.mono, fontSize: 32, color: COLORS.accent }} href="https://t.noit.pro/e/" target="_blank">t.noit.pro/e/</a></div>
+          <div style={{ fontFamily: FONTS.mono, fontSize: 32, color: COLORS.accent }}><a style={{ fontFamily: FONTS.mono, fontSize: 32, color: COLORS.accent }} href="https://t.noit.pro/g/" target="_blank">t.noit.pro/g/</a></div>
+          <div style={{ fontFamily: FONTS.mono, fontSize: 64, color: COLORS.accent }}><a href="https://colab.research.google.com/github/ewilpeers/bible/blob/master/xG_Collab/01GKSearch.ipynb"><img src="https://camo.githubusercontent.com/eff96fda6b2e0fff8cdf2978f89d61aa434bb98c00453ae23dd0aab8d1451633/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667" alt="Open In Colab" data-canonical-src="https://colab.research.google.com/assets/colab-badge.svg" target="_blank" /></a></div>
         </div>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 30 }}>
@@ -354,7 +355,7 @@ const Slide29_CTA = () => (
             'github.com/ewilpeers/new-testament',
             'github.com/ewilpeers/lv_fraktur_ocr',
           ].map((u, i) => (
-            <div key={i} style={{ fontFamily: FONTS.mono, fontSize: 24, color: '#E8DDC4' }}>{u}</div>
+            <div key={i} style={{ fontFamily: FONTS.mono, fontSize: 24, color: '#E8DDC4' }}><a style={{ fontFamily: FONTS.mono, fontSize: 24, color: '#E8DDC4' }} href={`https://${u}`} target="_blank">{u}</a></div>
           ))}
         </div>
       </div>
