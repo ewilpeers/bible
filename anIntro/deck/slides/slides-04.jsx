@@ -143,61 +143,77 @@ const Slide18_AlignmentFlow = () => (
 
 const Slide19_ExcelMockup = () => (
   <Slide>
-    <Eyebrow>What Excel sees</Eyebrow>
-    <Title>One row per Hebrew form. Three Latvian columns, three Greek columns, plus leftovers.</Title>
-    <Subtitle style={{ marginTop: 14, fontSize: 26 }}>
-      Each Hebrew/Greek form needs <b>verse</b>, <b>form</b>, and <b>form_en</b> (English transliteration). Words that didn't map go into a final <Code>LEFTOVER</Code> row.
-    </Subtitle>
-    <div style={{ flex: 1, marginTop: 30, display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 0 }}>
-      <div style={{ background: '#FFF', border: `1px solid ${COLORS.rule}`, width: '100%', maxWidth: 1500, boxShadow: '0 18px 40px rgba(31,26,20,0.10)', overflow: 'hidden' }}>
+    <Eyebrow>What Excel sees — proverbs/9.xlsx</Eyebrow>
+    <Title style={{ fontSize: 48 }}>One row per Hebrew form. Three Greek and three Latvian columns, plus <Code style={{ fontSize: '0.7em' }}>LEFTOVER</Code> rows.</Title>
+    <div style={{ flex: 1, marginTop: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 0 }}>
+      <div style={{ background: '#FFF', border: `1px solid ${COLORS.rule}`, width: '100%', maxWidth: 1600, boxShadow: '0 18px 40px rgba(31,26,20,0.10)', overflow: 'hidden' }}>
         {(() => {
-          const cols = '60px 60px 1.1fr 0.9fr 0.95fr 0.95fr 0.95fr 0.9fr 0.9fr 0.9fr';
-          const headers = ['#', 'verse', 'form (Heb)', 'form_en', 'lv 1694', 'lv 1965', 'lv 2024', 'gr 1', 'gr 2', 'gr 3'];
+          // Real Excel structure from bible/proverbs/9.xlsx — Chapter 9 sheet.
+          // Columns: verse, form, form_en, greek_1..3, latvian_1..3
+          const cols = '60px 1.1fr 0.9fr 0.85fr 0.85fr 0.85fr 0.9fr 0.9fr 0.9fr';
+          const headers = ['verse', 'form', 'form_en', 'greek_1', 'greek_2', 'greek_3', 'latvian_1', 'latvian_2', 'latvian_3'];
+          // Rows. v = verse number on verse-start rows only. Empty strings stay empty.
           const rows = [
-            { n: 1, v: 1, w: 'אַ֥שְֽׁרֵי', en: 'ʾaš·rê', lv1: 'Swehtigs', lv2: 'Svētīgs', lv3: 'Svētīgs', g1: 'μακάριος', g2: '', g3: '' },
-            { n: 2, v: 1, w: 'הָאִ֗ישׁ', en: 'hā·ʾîš', lv1: 'tas Wihrs', lv2: 'tas vīrs', lv3: 'tas cilvēks', g1: 'ἀνήρ', g2: '', g3: '' },
-            { n: 3, v: 1, w: 'בַּעֲצַ֪ת', en: 'ba·ʿă·ṣaṯ', lv1: 'pehz Padohma', lv2: 'pēc padoma', lv3: 'padomam', g1: 'ἐν', g2: 'βουλῇ', g3: '', edited: true },
-            { n: 4, v: 1, w: 'רְ֭שָׁעִים', en: 'rə·šā·ʿîm', lv1: 'to bezdeewigo', lv2: 'bezdievīgo', lv3: 'ļauno', g1: 'ἀσεβῶν', g2: '', g3: '' },
-            { n: 5, v: 1, w: 'וּבְמוֹשַׁ֥ב', en: 'ū·ḇə·mō·wōšaḇ', lv1: 'un eekẜch tahs Ꞩeh̄ẜchanas', lv2: 'un sēdes vietā', lv3: 'nedz arī sēž', g1: 'καὶ', g2: 'ἐπὶ', g3: 'καθέδραν' },
-            { leftover: true, lv3: 'ļauno', g3: '' },
+            // Verse 1 — 6 forms
+            { v: 1, w: 'חָ֭כְמוֹת', en: 'Wisdom',           g1: 'ἡ',         g2: 'σοφία',     g3: '',       l1: 'Gudrība',  l2: '',        l3: ''      },
+            { w: 'בָּנְתָ֣ה',     en: 'has built',         g1: 'ᾠκοδόμησεν', g2: '',          g3: '',       l1: 'darīja',   l2: 'sev',     l3: ''      },
+            { w: 'בֵיתָ֑הּ',      en: 'her house',         g1: 'ἑαυτῇ',      g2: 'οἶκον',     g3: '',       l1: 'namu',     l2: '',        l3: ''      },
+            { w: 'חָצְבָ֖ה',      en: 'she has hewn out',  g1: 'καὶ',        g2: 'ὑπήρεισεν', g3: '',       l1: 'un',       l2: 'izcirta', l3: ''      },
+            { w: 'עַמּוּדֶ֣יהָ',  en: 'her pillars',       g1: 'στύλους',    g2: '',          g3: '',       l1: 'septiņus', l2: 'stabus',  l3: ''      },
+            { w: 'שִׁבְעָֽה׃',    en: 'seven',             g1: 'ἑπτά',       g2: '',          g3: '',       l1: '',         l2: '',        l3: ''      },
+            // Verse 2 — 7 forms
+            { v: 2, w: 'טָבְחָ֣ה', en: 'She has slaughtered', g1: 'ἔσφαξεν',  g2: '',          g3: '',       l1: 'tā',       l2: 'nokāva',  l3: ''      },
+            { w: 'טִ֭בְחָהּ',     en: 'her meat',          g1: 'τὰ',         g2: 'ἑαυτῆς',    g3: 'θύματα', l1: 'savus',    l2: 'kaujamos', l3: 'lopus' },
+            { w: 'מָסְכָ֣ה',      en: 'she has mixed',     g1: 'ἐκέρασεν',   g2: '',          g3: '',       l1: 'sajauca',  l2: '',        l3: ''      },
+            { w: 'יֵינָ֑הּ',      en: 'her wine',          g1: 'τὸν',        g2: 'ἑαυτῆς',    g3: 'οἶνον',  l1: 'savu',     l2: 'vīnu',    l3: ''      },
+            { w: 'אַ֝֗ף',         en: 'also',              g1: 'καὶ',        g2: '',          g3: '',       l1: 'un',       l2: '',        l3: ''      },
+            { w: 'עָֽרְכָ֥ה',     en: 'she has furnished', g1: 'ἡτοιμάσατο', g2: '',          g3: '',       l1: 'saklāja',  l2: '',        l3: ''      },
+            { w: 'שֻׁלְחָנָֽהּ׃', en: 'her table',         g1: 'τὴν',        g2: 'ἑαυτῆς',    g3: 'τράπεζαν', l1: 'galdu', l2: '',        l3: ''      },
+            // Leftover — verse 2 Greek words that didn't map to any Hebrew form
+            { leftover: true, lang: 'greek', verse: 2, g1: 'εἰς', g2: 'κρατῆρα', g3: '', l1: '', l2: '', l3: '' },
           ];
           return (
             <React.Fragment>
               <div style={{ background: '#1E6E3D', color: '#FFF', display: 'grid', gridTemplateColumns: cols, fontFamily: FONTS.sans, fontSize: 15, fontWeight: 600 }}>
                 {headers.map((h, i) => (
-                  <div key={i} style={{ padding: '12px 12px', borderRight: '1px solid #2D8A4F' }}>{h}</div>
+                  <div key={i} style={{ padding: '9px 12px', borderRight: '1px solid #2D8A4F' }}>{h}</div>
                 ))}
               </div>
-              {rows.map((row, i) => {
-                if (row.leftover) {
+              {(() => {
+                let dataIdx = 0; // track non-leftover index for striping
+                return rows.map((row, i) => {
+                  if (row.leftover) {
+                    return (
+                      <div key={i} style={{ display: 'grid', gridTemplateColumns: cols, borderTop: `2px solid ${COLORS.accent}`, borderBottom: `1px solid ${COLORS.ruleSoft}`, background: '#FBE9D6', fontFamily: FONTS.serif, fontSize: 18, alignItems: 'center' }}>
+                        <div style={{ padding: '9px 12px', fontFamily: FONTS.mono, fontSize: 13, color: COLORS.accent, gridColumn: '1 / 3', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>LEFTOVER · v{row.verse} · {row.lang}</div>
+                        <div style={{ padding: '9px 12px', gridColumn: '3 / 4', fontStyle: 'italic', color: COLORS.inkSoft }}>words not mapped to any form</div>
+                        <div style={{ padding: '9px 12px', fontFamily: FONTS.greek, color: COLORS.greek, fontSize: 19, fontWeight: 600 }}>{row.g1}</div>
+                        <div style={{ padding: '9px 12px', fontFamily: FONTS.greek, color: COLORS.greek, fontSize: 19, fontWeight: 600 }}>{row.g2}</div>
+                        <div style={{ padding: '9px 12px', fontFamily: FONTS.greek, color: COLORS.greek, fontSize: 19, fontWeight: 600 }}>{row.g3}</div>
+                        <div style={{ padding: '9px 12px', color: COLORS.latvian, fontWeight: 600 }}>{row.l1}</div>
+                        <div style={{ padding: '9px 12px', color: COLORS.latvian, fontWeight: 600 }}>{row.l2}</div>
+                        <div style={{ padding: '9px 12px', color: COLORS.latvian, fontWeight: 600 }}>{row.l3}</div>
+                      </div>
+                    );
+                  }
+                  const isVerseStart = row.v != null;
+                  const bg = isVerseStart ? '#FFF6D6' : (dataIdx % 2 ? '#FAF7EE' : '#FFF');
+                  dataIdx++;
                   return (
-                    <div key={i} style={{ display: 'grid', gridTemplateColumns: cols, borderTop: `2px solid ${COLORS.accent}`, background: '#FBE9D6', fontFamily: FONTS.serif, fontSize: 18, alignItems: 'center' }}>
-                      <div style={{ padding: '12px 12px', fontFamily: FONTS.mono, fontSize: 14, color: COLORS.accent, gridColumn: '1 / 3', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' }}>LEFTOVER</div>
-                      <div style={{ padding: '12px 12px', gridColumn: '3 / 5', fontStyle: 'italic', color: COLORS.inkSoft }}>words not mapped to any form</div>
-                      <div style={{ padding: '12px 12px' }}></div>
-                      <div style={{ padding: '12px 12px' }}></div>
-                      <div style={{ padding: '12px 12px', color: COLORS.latvian, fontWeight: 600 }}>{row.lv3}</div>
-                      <div style={{ padding: '12px 12px' }}></div>
-                      <div style={{ padding: '12px 12px' }}></div>
-                      <div style={{ padding: '12px 12px' }}></div>
+                    <div key={i} style={{ display: 'grid', gridTemplateColumns: cols, borderBottom: `1px solid ${COLORS.ruleSoft}`, background: bg, fontFamily: FONTS.serif, fontSize: 18, alignItems: 'center' }}>
+                      <div style={{ padding: '7px 12px', fontFamily: FONTS.mono, fontSize: 15, color: COLORS.inkMute }}>{isVerseStart ? row.v : ''}</div>
+                      <div style={{ padding: '7px 12px', fontFamily: FONTS.hebrew, fontSize: 22, color: COLORS.hebrew, direction: 'rtl' }}>{row.w}</div>
+                      <div style={{ padding: '7px 12px', fontStyle: 'italic', color: COLORS.inkSoft, fontSize: 15 }}>{row.en}</div>
+                      <div style={{ padding: '7px 12px', fontFamily: FONTS.greek, color: COLORS.greek, fontSize: 19 }}>{row.g1}</div>
+                      <div style={{ padding: '7px 12px', fontFamily: FONTS.greek, color: COLORS.greek, fontSize: 19 }}>{row.g2}</div>
+                      <div style={{ padding: '7px 12px', fontFamily: FONTS.greek, color: COLORS.greek, fontSize: 19 }}>{row.g3}</div>
+                      <div style={{ padding: '7px 12px', color: COLORS.latvian }}>{row.l1}</div>
+                      <div style={{ padding: '7px 12px', color: COLORS.latvian }}>{row.l2}</div>
+                      <div style={{ padding: '7px 12px', color: COLORS.latvian }}>{row.l3}</div>
                     </div>
                   );
-                }
-                return (
-                  <div key={i} style={{ display: 'grid', gridTemplateColumns: cols, borderBottom: `1px solid ${COLORS.ruleSoft}`, background: row.edited ? '#FFF6D6' : i % 2 ? '#FAF7EE' : '#FFF', fontFamily: FONTS.serif, fontSize: 18, alignItems: 'center' }}>
-                    <div style={{ padding: '11px 12px', fontFamily: FONTS.mono, fontSize: 15, color: COLORS.inkMute }}>{row.n}</div>
-                    <div style={{ padding: '11px 12px', fontFamily: FONTS.mono, fontSize: 15, color: COLORS.inkMute }}>{row.v}</div>
-                    <div style={{ padding: '11px 12px', fontFamily: FONTS.hebrew, fontSize: 22, color: COLORS.hebrew, direction: 'rtl' }}>{row.w}</div>
-                    <div style={{ padding: '11px 12px', fontStyle: 'italic', color: COLORS.inkSoft, fontSize: 15 }}>{row.en}</div>
-                    <div style={{ padding: '11px 12px', color: COLORS.fraktur, fontFamily: FONTS.fraktur, fontSize: 19 }}>{row.lv1}</div>
-                    <div style={{ padding: '11px 12px', color: COLORS.latvian }}>{row.lv2}</div>
-                    <div style={{ padding: '11px 12px', color: COLORS.latvian, fontWeight: row.edited ? 600 : 400 }}>{row.lv3}{row.edited && <span style={{ color: '#B86A30', marginLeft: 8, fontFamily: FONTS.mono, fontSize: 13 }}>← moved</span>}</div>
-                    <div style={{ padding: '11px 12px', fontFamily: FONTS.greek, color: COLORS.greek, fontSize: 19 }}>{row.g1}</div>
-                    <div style={{ padding: '11px 12px', fontFamily: FONTS.greek, color: COLORS.greek, fontSize: 19 }}>{row.g2}</div>
-                    <div style={{ padding: '11px 12px', fontFamily: FONTS.greek, color: COLORS.greek, fontSize: 19 }}>{row.g3}</div>
-                  </div>
-                );
-              })}
+                });
+              })()}
             </React.Fragment>
           );
         })()}
