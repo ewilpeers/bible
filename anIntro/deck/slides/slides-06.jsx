@@ -179,7 +179,7 @@ const Slide28_End = () => (
         Paldies · Thank you
       </div>
       <Title style={{ fontSize: 140, lineHeight: 1, textAlign: 'center' }}>Questions?</Title>
-      <FrakturSample text="Ꞩwehtigs irr ka Wahrds bes Sirds neeẜẜam" style={{ fontSize: 32, color: COLORS.inkSoft, textAlign: 'center', marginTop: 30 }} />
+      <FrakturSample text="tahds irr kà kahds Kohks pee Uhdens Uppehm ſtahdihts" style={{ fontSize: 32, color: COLORS.inkSoft, textAlign: 'center', marginTop: 30 }} />
       <div style={{ fontFamily: FONTS.mono, fontSize: 22, color: COLORS.accent, marginTop: 12 }}>t.noit.pro</div>
     </div>
   </Slide>
