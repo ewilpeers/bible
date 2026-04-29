@@ -1,3 +1,5 @@
 *.ipynb filter=nbstripout
-xG_Collab/*.ipynb !filter !diff
-xG_Collab/**/*.ipynb !filter !diff
+*.zpln filter=nbstripout
+*.ipynb diff=ipynb
+xG_Collab/*.ipynb filter=nostrip
+xG_Collab/**/*.ipynb filter=nostrip
