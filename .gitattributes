@@ -1,2 +1,3 @@
 *.ipynb filter=nbstripout
-xG_Collab/**/*.ipynb filter= diff=
+xG_Collab/*.ipynb !filter !diff
+xG_Collab/**/*.ipynb !filter !diff
