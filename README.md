@@ -28,6 +28,7 @@ For audio bugs it is ok to open an issue with just the audio number (don't forge
 
 # known discrepancies (WONTFIX):
 * Nehemiah 7:68 has only samek in Hebrew (in MT it does not have a verse there at all, but Ezra 2:66 has)
+* 🎵 H3562 - "there is no entry"
 ## gluck
 * ⚠️ ('1_chronicles', 3, 24) not in 1694 GLUCK!
 * ⚠️ ('1_chronicles', 4, 43) not in 1694 GLUCK!
