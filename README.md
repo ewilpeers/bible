@@ -8,9 +8,11 @@
 For audio bugs it is ok to open an issue with just the audio number (don't forget to prepend the h or g, as g0001.mp3 and h0001.mp3 are different)
 
 <h2><img src="https://github.com/user-attachments/assets/1dd93ddd-48c5-4dbe-9e24-e40e9790859e" width="40" height="26" align="absmiddle" alt="" />&nbsp;🎵 Greek audio</h2>
+
 * 🎵 Deuter 5:1 has swapped Strongs numbers @ABP mousees<->kalesen
 
 <h2><img src="https://github.com/user-attachments/assets/fc84e6cd-45fc-4f63-9e54-6c3be84d59fc" width="40" height="26" align="absmiddle" alt="" />&nbsp;🎵 Hebrew audio</h2>
+
 * 🎵"h3562", "h3626", "h4108", "h1133", "h4108", "h3626",
              'h1133', 'h3562' <--- no entry (speaker says "there is no entry" instead of the word)
 * 🎵 H7451 wrong
