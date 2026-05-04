@@ -31,7 +31,7 @@ For audio bugs it is ok to open an issue with just the audio number (don't forge
 * 🎵 H3562 - "there is no entry"
 * h3626
 * 🎵 "h3562", "h3626", "h4108", "h1133", "h4108", "h3626",
-             'h1133', 'h3562'
+             'h1133', 'h3562' <--- no entry
 ## gluck
 * ⚠️ ('1_chronicles', 3, 24) not in 1694 GLUCK!
 * ⚠️ ('1_chronicles', 4, 43) not in 1694 GLUCK!
