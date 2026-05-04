@@ -19,7 +19,6 @@ For audio bugs it is ok to open an issue with just the audio number (don't forge
 * 🎵 Deuter 5:1 has swapped Strongs numbers @ABP mousees<->kalesen
 
 ## <img width="40" height="25" alt="image" src="https://github.com/user-attachments/assets/fc84e6cd-45fc-4f63-9e54-6c3be84d59fc" />🎵 Hebrew audio
-* 🎵 H0459 ???
 * 🎵 H430 wrong
 * 🎵 H503 2x announce results in wrong split
 * 🎵 H505 1.x wrong
