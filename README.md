@@ -20,8 +20,6 @@ For audio bugs it is ok to open an issue with just the audio number (don't forge
 
 * 🎵"h3562", "h3626", "h4108", "h1133", "h4108", "h3626",
              'h1133', 'h3562' <--- no entry (speaker says "there is no entry" instead of the word)
-* 🎵 H7451 wrong
-
 
 # known discrepancies (WONTFIX):
 * Nehemiah 7:68 has only samek in Hebrew (in MT it does not have a verse there at all, but Ezra 2:66 has)
