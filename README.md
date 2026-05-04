@@ -19,18 +19,14 @@ For audio bugs it is ok to open an issue with just the audio number (don't forge
 * 🎵 Deuter 5:1 has swapped Strongs numbers @ABP mousees<->kalesen
 
 ## <img width="40" height="25" alt="image" src="https://github.com/user-attachments/assets/fc84e6cd-45fc-4f63-9e54-6c3be84d59fc" />🎵 Hebrew audio
-* 🎵 H430 wrong
-* 🎵 H503 2x announce results in wrong split
-* 🎵 H505 1.x wrong
+* 🎵"h3562", "h3626", "h4108", "h1133", "h4108", "h3626",
+             'h1133', 'h3562' <--- no entry (speaker says "there is no entry" instead of the word)
 * 🎵 H7451 wrong
-* 🎵 H969 ???
+
 
 # known discrepancies (WONTFIX):
 * Nehemiah 7:68 has only samek in Hebrew (in MT it does not have a verse there at all, but Ezra 2:66 has)
-* 🎵 H3562 - "there is no entry"
-* h3626
-* 🎵 "h3562", "h3626", "h4108", "h1133", "h4108", "h3626",
-             'h1133', 'h3562' <--- no entry
+
 ## gluck
 * ⚠️ ('1_chronicles', 3, 24) not in 1694 GLUCK!
 * ⚠️ ('1_chronicles', 4, 43) not in 1694 GLUCK!
