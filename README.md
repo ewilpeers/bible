@@ -1,5 +1,5 @@
 # set-up
-see wiki.
+see wiki. (website: see aREADME folder) (dev: clone /fork this and new-testament repos)
 
 # Nice to have (TODO) features:
 * ensure greek comformity to rev 
