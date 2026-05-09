@@ -2,9 +2,9 @@
 see wiki. (website: see aREADME folder) (dev: clone /fork this and new-testament repos)
 
 # Nice to have (TODO) features:
-* ensure greek comformity to rev 
-* color the morpology just as on [BLB](https://www.blueletterbible.org/tools/interlinear/mgnt/rev/1/1/)
-* verse / fragment views just as on BLB
+* ~ensure greek comformity to rev~ DONE
+* ~color the morpology just as on [BLB](https://www.blueletterbible.org/tools/interlinear/mgnt/rev/1/1/)~ not just as but DONE (better, they don't have hebrew morph colored)
+* verse / fragment views just as on BLB <-- now have link anchors #v(number)
 
   
 # known bugs (TOFIX):
