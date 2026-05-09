@@ -38,3 +38,16 @@ blb_pronunc_gk_hashes.json
 02.OCR/__pycache__/*
 **/__pycache__/
 Android_wrapp_app/app/build/
+
+# Android / Gradle
+.gradle/
+build/
+**/build/
+local.properties
+*.iml
+.idea/
+captures/
+.cxx/
+
+# Keep the wrapper
+!gradle/wrapper/gradle-wrapper.jar
