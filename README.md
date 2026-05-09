@@ -1,3 +1,6 @@
+# set-up
+see wiki.
+
 # Nice to have (TODO) features:
 * ensure greek comformity to rev 
 * color the morpology just as on [BLB](https://www.blueletterbible.org/tools/interlinear/mgnt/rev/1/1/)
