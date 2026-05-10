@@ -31,12 +31,17 @@ import java.util.Collections;
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQ_LEGACY_PERMS = 1001;
-    private static final String BIBLE_DIR = "/Bibele/bibele_andr";
+    private static final String BIBLE_DIR = "Bibele/bibele_andr";
+
+    private static final String STATE_CURRENT_DIR = "current_dir";
+    private static final String STATE_VIEWING_FILE = "viewing_file";
+    private static final String STATE_WEBVIEW = "webview_state";
 
     private WebView webView;
     private ListView fileList;
     private File rootDir;
     private File currentDir;
+    private boolean restoredViewingFile = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,8 +69,40 @@ public class MainActivity extends AppCompatActivity {
         webView.setWebChromeClient(new WebChromeClient());
 
         rootDir = new File(Environment.getExternalStorageDirectory(), BIBLE_DIR);
+        currentDir = rootDir;
+
+        // Restore WebView contents (URL + scroll + history) before any new load.
+        if (savedInstanceState != null) {
+            Bundle wvState = savedInstanceState.getBundle(STATE_WEBVIEW);
+            if (wvState != null) {
+                webView.restoreState(wvState);
+            }
+            String dirPath = savedInstanceState.getString(STATE_CURRENT_DIR);
+            if (dirPath != null) {
+                File restored = new File(dirPath);
+                if (restored.exists() && restored.isDirectory()) {
+                    currentDir = restored;
+                }
+            }
+            restoredViewingFile = savedInstanceState.getBoolean(STATE_VIEWING_FILE, false);
+        }
 
         ensureStoragePermission();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (currentDir != null) {
+            outState.putString(STATE_CURRENT_DIR, currentDir.getAbsolutePath());
+        }
+        boolean viewingFile = webView.getVisibility() == View.VISIBLE;
+        outState.putBoolean(STATE_VIEWING_FILE, viewingFile);
+        if (viewingFile) {
+            Bundle wvState = new Bundle();
+            webView.saveState(wvState);
+            outState.putBundle(STATE_WEBVIEW, wvState);
+        }
     }
 
     private void ensureStoragePermission() {
@@ -89,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                         .show();
                 return;
             }
-            loadDirectory(rootDir);
+            startupWithPermission();
         } else {
             // Pre-Android 11: legacy READ_EXTERNAL_STORAGE
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -98,8 +135,21 @@ public class MainActivity extends AppCompatActivity {
                         new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
                         REQ_LEGACY_PERMS);
             } else {
-                loadDirectory(rootDir);
+                startupWithPermission();
             }
+        }
+    }
+
+    private void startupWithPermission() {
+        if (restoredViewingFile) {
+            // WebView state was restored in onCreate; just show it.
+            // Title reflects the directory we were browsing before opening the file.
+            setTitle(currentDir.getAbsolutePath()
+                    .replace(Environment.getExternalStorageDirectory().getAbsolutePath(), "/sdcard"));
+            fileList.setVisibility(View.GONE);
+            webView.setVisibility(View.VISIBLE);
+        } else {
+            loadDirectory(currentDir != null ? currentDir : rootDir);
         }
     }
 
@@ -108,8 +158,9 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R
                 && Environment.isExternalStorageManager()
-                && fileList.getAdapter() == null) {
-            loadDirectory(rootDir);
+                && fileList.getAdapter() == null
+                && !restoredViewingFile) {
+            startupWithPermission();
         }
     }
 
@@ -119,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == REQ_LEGACY_PERMS) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                loadDirectory(rootDir);
+                startupWithPermission();
             } else {
                 Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show();
                 finish();
@@ -138,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         currentDir = dir;
+        restoredViewingFile = false;
         setTitle(dir.getAbsolutePath().replace(Environment.getExternalStorageDirectory().getAbsolutePath(), "/sdcard"));
 
         File[] files = dir.listFiles();
