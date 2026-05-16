@@ -31,7 +31,7 @@ import java.util.Collections;
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQ_LEGACY_PERMS = 1001;
-    private static final String BIBLE_DIR = "Bibele/bibele_andr";
+    private static final String BIBLE_DIR = "Bibele";
 
     private static final String STATE_CURRENT_DIR = "current_dir";
     private static final String STATE_VIEWING_FILE = "viewing_file";
