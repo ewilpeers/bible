@@ -894,8 +894,8 @@ def run_full(args):
     book_stats = []
 
     for book in books:
-        if book != "psalms":
-            continue
+        #if book != "psalms":
+        #    continue
         if book not in BIBLE_TO_CATSS:
             print(f"skip  {book}: no CATSS mapping")
             book_stats.append({'book': book, 'par_stem': '-',
@@ -980,7 +980,7 @@ def main():
     args = ap.parse_args()
     
     args = ap.parse_args([
-        '--par-dir', 'B:/m_penn/ccat_archive/gopher/text/religion/biblical/parallel',
+        '--par-dir', '../../m_penn/ccat_archive/gopher/text/religion/biblical/parallel',
         '--bible-dir', '../bible',
         '--out-dir', 'heb_count_reports'
     ])
