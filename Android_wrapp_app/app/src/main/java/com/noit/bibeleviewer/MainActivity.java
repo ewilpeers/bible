@@ -9,6 +9,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.Settings;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -105,6 +107,44 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // ---- Action bar buttons ----------------------------------------------
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        // Home / scroll controls only make sense while a file is open in the WebView.
+        boolean viewingFile = webView.getVisibility() == View.VISIBLE;
+        menu.findItem(R.id.action_home).setVisible(viewingFile);
+        menu.findItem(R.id.action_scroll_up).setVisible(viewingFile);
+        menu.findItem(R.id.action_scroll_down).setVisible(viewingFile);
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_home) {
+            // Exit the open file and return to the file chooser for the current folder.
+            // Change currentDir to rootDir here if you'd rather jump all the way to /sdcard/Bibele.
+            loadDirectory(currentDir != null ? currentDir : rootDir);
+            return true;
+        } else if (id == R.id.action_scroll_up) {
+            webView.pageUp(true);   // true = all the way to the top (HTML page or zoomed image)
+            return true;
+        } else if (id == R.id.action_scroll_down) {
+            webView.pageDown(true); // true = all the way to the bottom
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    // ----------------------------------------------------------------------
+
     private void ensureStoragePermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             // Android 11+: needs MANAGE_EXTERNAL_STORAGE for arbitrary /sdcard access
@@ -148,6 +188,7 @@ public class MainActivity extends AppCompatActivity {
                     .replace(Environment.getExternalStorageDirectory().getAbsolutePath(), "/sdcard"));
             fileList.setVisibility(View.GONE);
             webView.setVisibility(View.VISIBLE);
+            invalidateOptionsMenu();
         } else {
             loadDirectory(currentDir != null ? currentDir : rootDir);
         }
@@ -230,12 +271,14 @@ public class MainActivity extends AppCompatActivity {
 
         fileList.setVisibility(View.VISIBLE);
         webView.setVisibility(View.GONE);
+        invalidateOptionsMenu();
     }
 
     private void openInWebView(File file) {
         fileList.setVisibility(View.GONE);
         webView.setVisibility(View.VISIBLE);
         webView.loadUrl(Uri.fromFile(file).toString());
+        invalidateOptionsMenu();
     }
 
     @Override
