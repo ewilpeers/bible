@@ -36,7 +36,6 @@ For audio bugs it is ok to open an issue with just the audio number (don't forge
 * ('proverbs', 16, 6)
 * ('proverbs', 16, 9)
 ## gluck
-* ⚠️ ('1_chronicles', 3, 24) not in 1694 GLUCK!
 * ⚠️ ('1_chronicles', 4, 43) not in 1694 GLUCK!
 * ⚠️ ('ecclesiastes', 10, 11) not in 1694 GLUCK!
 * ⚠️ ('ezekiel', 7, 20) not in 1694 GLUCK!
