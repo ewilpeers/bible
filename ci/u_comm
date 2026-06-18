@@ -379,7 +379,7 @@ window.BOOKS_DATA = [{"slug":"genesis","name_en":"Genesis","name_lv":"Pirmā Moz
   //    1 = startswith on any haystack
   //    2 = contains on flat haystack
   // Lower score = better. Books without a match are excluded.
-  // Within the same score, books are sorted by `priority` (NT-first per spec).
+  // Within the same score, books are sorted by priority (NT-first per spec).
   // ---------------------------------------------------------------------
   function matchBooks(frag) {
     if (!frag) return BOOKS.slice().sort(function (a, b) {
@@ -649,10 +649,11 @@ window.BOOKS_DATA = [{"slug":"genesis","name_en":"Genesis","name_lv":"Pirmā Moz
 	<div id="bible-search" data-base="/e"></div>
 EOF
 
+echo "<h2>ievadi a 2:38 vai citu Bībeles vietu un spied ENTER :) </h2> " >> $OUTPUT
 
 # Loop through the custom ordered list
 for book_dir in "${canonical_order_nt[@]}"; do
-    [ -d "$book_dir" ] || continue
+    [ -d "nt/$book_dir" ] || continue
     # Get Latvian name from array, or use the folder name if not found
     latvian_name=${lv_names_ot[$book_dir]}
     
@@ -683,7 +684,7 @@ echo "<hr>" >> $OUTPUT
 
 #now the OT Books
 for book_dir in "${canonical_order_ot[@]}"; do
-    [ -d "$book_dir" ] || continue
+    [ -d "html/$book_dir" ] || continue
     # Get Latvian name from array, or use the folder name if not found
     latvian_name=${lv_names_ot[$book_dir]}
     
@@ -714,7 +715,7 @@ echo "<hr>" >> $OUTPUT
 
 #now the leftovver NT Books
 for book_dir in "${leftover_order_nt[@]}"; do
-    [ -d "$book_dir" ] || continue
+    [ -d "nt/$book_dir" ] || continue
     # Get Latvian name from array, or use the folder name if not found
     latvian_name=${lv_names_ot[$book_dir]}
     
@@ -745,8 +746,7 @@ done
 
 echo "<hr>" >> $OUTPUT
 echo "<hr>" >> $OUTPUT
-echo "<a href='bibele_e.zip'>HTML FILES.zip</a><br />" >> $OUTPUT
-echo "<a href='excel/excel.zip'>Excel FILES.zip</a><br />" >> $OUTPUT
+
 
 cat <<EOF >> $OUTPUT
     <p style="text-align: center; color: #aaa; margin-top: 50px;">Ģenerēts: $(date '+%Y-%m-%d %H:%M')</p>

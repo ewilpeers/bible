@@ -333,7 +333,7 @@ window.BOOKS_DATA = [{"slug":"genesis","name_en":"Genesis","name_lv":"Pirmā Moz
   //    1 = startswith on any haystack
   //    2 = contains on flat haystack
   // Lower score = better. Books without a match are excluded.
-  // Within the same score, books are sorted by `priority` (NT-first per spec).
+  // Within the same score, books are sorted by priority (NT-first per spec).
   // ---------------------------------------------------------------------
   function matchBooks(frag) {
     if (!frag) return BOOKS.slice().sort(function (a, b) {
