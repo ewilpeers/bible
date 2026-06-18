@@ -81,6 +81,8 @@ jobs:
         run: |
           cd html
           bash ../ci/u
+          cd ..
+          bash ci/u_comm
       # If you have audio files or other static assets, copy them too:
       # - name: Copy static assets
       #   run: |
@@ -99,8 +101,7 @@ jobs:
           mkdir -p _site
           mkdir -p _site/e
           mkdir -p _site/g
-          cp html/index.html _site/
-          mv html/index.html _site/e/
+          mv index.html _site/
           mv html/* _site/e/
           mv nt/* _site/g/
           mv excel _site/e/
