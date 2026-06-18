@@ -649,7 +649,7 @@ window.BOOKS_DATA = [{"slug":"genesis","name_en":"Genesis","name_lv":"Pirmā Moz
 	<div id="bible-search" data-base="/e"></div>
 EOF
 
-echo "<h2>ievadi a 2:38 vai citu Bībeles vietu un spied ENTER :) </h2> " >> $OUTPUT
+echo "<h2>ievadi <span style="color: #FF4444">a 2:38</span> (Apustuļu darbi 2:38)    vai citu Bībeles vietu un spied ENTER :) </h2> " >> $OUTPUT
 
 # Loop through the custom ordered list
 for book_dir in "${canonical_order_nt[@]}"; do
@@ -673,7 +673,7 @@ for book_dir in "${canonical_order_nt[@]}"; do
         for chapter_file in $(ls -v "nt/$book_dir"/*.html); do
             filename=$(basename "$chapter_file")
             chapter_num="${filename%.html}"
-            echo "        <a class='chapter-link' href=\"g/$chapter_file\">$chapter_num</a>" >> $OUTPUT
+            echo "        <a class='chapter-link' href=\"g/$book_dir/$filename\">$chapter_num</a>" >> $OUTPUT
         done
     fi
 
@@ -704,7 +704,7 @@ for book_dir in "${canonical_order_ot[@]}"; do
         for chapter_file in $(ls -v "html/$book_dir"/*.html); do
             filename=$(basename "$chapter_file")
             chapter_num="${filename%.html}"
-            echo "        <a class='chapter-link' href=\"e/$chapter_file\">$chapter_num</a>" >> $OUTPUT
+            echo "        <a class='chapter-link' href=\"e/$book_dir/$filename\">$chapter_num</a>" >> $OUTPUT
         done
     fi
 
@@ -735,7 +735,7 @@ for book_dir in "${leftover_order_nt[@]}"; do
         for chapter_file in $(ls -v "nt/$book_dir"/*.html); do
             filename=$(basename "$chapter_file")
             chapter_num="${filename%.html}"
-            echo "        <a class='chapter-link' href=\"g/$chapter_file\">$chapter_num</a>" >> $OUTPUT
+            echo "        <a class='chapter-link' href=\"g/$book_dir/$filename\">$chapter_num</a>" >> $OUTPUT
         done
     fi
 
