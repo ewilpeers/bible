@@ -54,6 +54,15 @@ jobs:
       - name: Debug - check CSV headers biblehub_hb_en_direct
         run: |
           head -1 data/biblehub_hb_en_direct.csv  
+
+      - name: Download NT and extract
+        run: |
+          mkdir g
+          cd g
+          curl -OL https://github.com/ewilpeers/new-testament/releases/download/gh-pages/artifact.tar.gz
+          tar xzf artifact.tar.gz
+          rm artifact.tar.gz
+          cd ..
           
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -86,9 +95,15 @@ jobs:
       - name: Prepare deploy folder
         run: |
           mkdir -p _site
-          cp -r html/* _site/
-          cp -r excel _site/
-          cp -r bible/fonts _site/
+          mkdir -p _site/e
+          mkdir -p _site/g
+          cp html/index.html _site/
+          mv html/index.html _site/e/
+          mv html/* _site/e/
+          mv g/* _site/g/
+          mv excel _site/e/
+          cp -r bible/fonts _site/e/
+          mv bible/fonts _site/g/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
